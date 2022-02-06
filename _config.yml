@@ -1,10 +1,10 @@
 # Site settings
 title: DHniyeo Blog
-SEOTitle: 黄玄的博客 | Hux Blog
+SEOTitle: coding Blog | DHniyeo Blog
 header-img: img/home-bg.jpg
 email: huxpro@gmail.com
-description: "关于程序与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
-keyword: "黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
+description: "Web & Mobile Lover，Embedded Engineer，UX Designer | DHniyeo @ehdgns915 의 개인 블로그, 당신과 함께 더 큰 세상을 발견하세요."
+keyword: "DHniyeo, @ehdgns915, DHniyeo Blog, Web, JavaScript, C++, C, Linux, Python, Embedded, DataMining"
 url: "https://DHniyeo.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
