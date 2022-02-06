@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About"
-description: "《你是我的梦想》"
+description: "《너는 내 꿈이야》"
 header-img: "img/about-bg.jpg"
 multilingual: true
 ---
@@ -22,15 +22,15 @@ multilingual: true
 
 
 {% if site.disqus_username %}
-<!-- disqus 评论框 start -->
+<!-- disqus 댓글 상자 start -->
 <div class="comment">
     <div id="disqus_thread" class="disqus-thread">
 
     </div>
 </div>
-<!-- disqus 评论框 end -->
+<!-- disqus 댓글 상자 end -->
 
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<!-- disqus 공개 JS 코드 start (웹 페이지는 한 번만 삽입하면 됩니다.) -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "{{site.disqus_username}}";
@@ -43,5 +43,5 @@ multilingual: true
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- disqus 公共JS代码 end -->
+<!-- disqus 공개 JS 코드 end -->
 {% endif %}
