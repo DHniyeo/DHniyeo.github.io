@@ -1,6 +1,6 @@
 ---
 layout:     keynote
-title:      "Progressive Web App 之我见"
+title:      "Progressive Web App"
 subtitle:   "🎞  Slides:Progressive Web App, in my points of view"
 iframe:     "//huangxuan.me/pwa-in-my-pov/"
 nav-style:  "invert"
@@ -12,10 +12,7 @@ tags:
     - PWA
 ---
 
-
-> 下滑这里查看更多内容
-
-### [Watching Fullscreen →](https://huangxuan.me/pwa-in-my-pov/)
+### [Watching Fullscreen →]
 
 <div class="visible-md visible-lg">
     <img src="//huangxuan.me/pwa-in-my-pov/attach/qrcode.png" width="350" />
@@ -37,4 +34,4 @@ tags:
 - Why Web? 
 
 
-### Power by [Yanshuo.io（演说.io）](https://yanshuo.io)
+### Power by [Yanshuo](https://yanshuo.io)
