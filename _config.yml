@@ -79,7 +79,7 @@ ga_domain: huangxuan.me
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: 
-"경북대학교 전자공학부(전공) SW(부전공) <br> email : ehdgns915@naver.com <br> front-end/embedded 공부중 입니다. <br> Language : c, c++, python, Linux, java"
+"경북대학교 전자공학부(전공) SW(부전공) <br> email \: ehdgns915@naver.com <br> front-end/embedded 공부중 입니다. <br> Language \: c, c++, python, Linux, java"
 
 sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
