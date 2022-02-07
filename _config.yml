@@ -13,11 +13,12 @@ future: true
 
 # SNS settings
 RSS: false
-naverblog_username: ehdgns915
 
+naverblog_username: ehdgns915
 github_username:    DHniyeo
 facebook_username:  ehdgns915
 instagram_username: ehdgns915
+
 #twitter_username:   DHniyeo
 
 #weibo_username:     DHniyeo
