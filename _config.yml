@@ -18,6 +18,7 @@ RSS: false
 github_username:    DHniyeo
 twitter_username:   DHniyeo
 facebook_username:  DHniyeo
+instagram_username: ehdgns915
 #linkedin_username:  firstname-lastname-idxxxx
 
 
@@ -62,7 +63,7 @@ kramdown:
 disqus_username: dhyeo
 
 # Netease settings
-netease_comment: false
+# netease_comment: false
 
 
 
