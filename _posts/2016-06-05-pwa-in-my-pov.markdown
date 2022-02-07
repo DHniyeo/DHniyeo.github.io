@@ -1,6 +1,6 @@
 ---
 layout:     keynote
-title:      "Progressive Web App"
+title:      "키노트 양식"
 subtitle:   "🎞  Slides:Progressive Web App, in my points of view"
 iframe:     "//huangxuan.me/pwa-in-my-pov/"
 nav-style:  "invert"
