@@ -81,8 +81,8 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
-      - name: Bundle install
-        run: bundle install
+      - name: Bundle update
+        run: bundle update
         
       - name: Test site
         run: |
