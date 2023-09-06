@@ -39,8 +39,8 @@ jobs:
 
       - run: node _scripts/notion-import.js
         env:
-          NOTION_TOKEN: process.env.NOTION_TOKEN
-          DATABASE_ID: process.env.DATABASE_ID
+          NOTION_TOKEN: $
+          DATABASE_ID: $
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         env:
