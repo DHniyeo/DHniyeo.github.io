@@ -32,7 +32,15 @@ facebook_username:  100003103282009
 highlighter: rouge
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+exclude: 
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - cache/
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in Korea, uncomment to use this:
 timezone: KOR
