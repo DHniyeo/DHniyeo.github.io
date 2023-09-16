@@ -9,7 +9,7 @@ categories: [Program Language, ]
 # cout
 
 
-<iostream>
+\<iostream\>
 
 
 C++ 스트림 유형의 **객체**
