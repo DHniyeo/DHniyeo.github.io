@@ -37,5 +37,5 @@ categories: [Program Language, ]
 해당 문제를 해결 하는 방법은 다음 페이지를 참고하면 된다.
 
 
-[Untitled](https://www.notion.so/fe3a7324eb8c45469db7fce8cbc7b2e4) 
+[bookmark](https://dhniyeo.github.io/program%20language/2023/09/16/C-,-C++-scanf()-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%9E%85%EB%A0%A5-%EB%B2%84%ED%8D%BC%EC%97%90-n-%EB%82%A8%EB%8A%94-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95/)
 
