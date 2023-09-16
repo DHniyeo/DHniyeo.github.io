@@ -36,7 +36,7 @@ printf에 비해 처리 속도가 느리다.
 # printf
 
 
-<cstdio>
+\<cstdio\>
 
 
 C의 형식화된 문자열을 표시하는데 주로 사용되는 함수
@@ -75,37 +75,37 @@ cout에 비해 처리 속도가 빠르다. (일반적으로 cin/cout/endl이 sca
 **Type-safe**
 
 
-<iostream> : 컴파일러가 I/O되는 객체의 타입을 static하게 알 수 있음
+\<iostream\> : 컴파일러가 I/O되는 객체의 타입을 static하게 알 수 있음
 
 
-<cstdio> :  %를 써서 type을 dynamic하게 알아냄
+\<cstdio\> :  %를 써서 type을 dynamic하게 알아냄
 
 
 **Less error prone**
 
 
-<iostream> : %토큰을 쓰지 않기 때문에 error를 줄일 수 있음
+\<iostream\> : %토큰을 쓰지 않기 때문에 error를 줄일 수 있음
 
 
-<cstdio> : %를 쓰기 때문에 형식지정자가 실제로 입출력할 객체와 일치해야 함
+\<cstdio\> : %를 쓰기 때문에 형식지정자가 실제로 입출력할 객체와 일치해야 함
 
 
 **Extensible**
 
 
-<iostream> : 기존의 코드를 바꾸지 않고 유저가 정의한 타입을 입출력 할 수 있음
+\<iostream\> : 기존의 코드를 바꾸지 않고 유저가 정의한 타입을 입출력 할 수 있음
 
 
-<cstdio> : 그렇지 않음
+\<cstdio\> : 그렇지 않음
 
 
 **Inheritable**
 
 
-<iostream> : std::ostream이나 std::istream같은 real class로부터 만들어졌기 때문에 상속이 가능함 따라서 유저가 정의한 것들도 stream처럼 보이고, 또 stream처럼 작용
+\<iostream\> : std::ostream이나 std::istream같은 real class로부터 만들어졌기 때문에 상속이 가능함 따라서 유저가 정의한 것들도 stream처럼 보이고, 또 stream처럼 작용
 
 
-<cstdio> : FILE* 같은 경우 상속이 불가능함
+\<cstdio\> : FILE* 같은 경우 상속이 불가능함
 
 
 ---
