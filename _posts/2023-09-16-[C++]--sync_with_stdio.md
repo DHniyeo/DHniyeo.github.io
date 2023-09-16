@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-09-16
-title: "[C++]  Sync_with_stdio"
+title: "[C++]  sync_with_stdio"
 tags: [C++, ]
 categories: [Program Language, ]
 ---
