@@ -1,9 +1,9 @@
 ---
 layout: post
 date: 2023-09-01
-title: "Demo Chart
+title: "Demo Chart"
 tags: [etc, ]
-categories: [etc, ]"
+categories: [etc, ]
 ---
 
 [embed](https://huangxuan.me/PL-chart/)

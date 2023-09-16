@@ -1,9 +1,9 @@
 ---
 layout: post
 date: 2023-09-16
-title: "[C, C++] Array, List, Vector, Queue, Deque
+title: "[C, C++] Array, List, Vector, Queue, Deque"
 tags: [C, C++, ]
-categories: [Program Language, ]"
+categories: [Program Language, ]
 ---
 
 # Array[(refer)](https://www.programiz.com/c-programming/c-arrays)

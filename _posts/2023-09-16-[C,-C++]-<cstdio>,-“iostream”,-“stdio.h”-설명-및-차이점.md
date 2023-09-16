@@ -1,9 +1,9 @@
 ---
 layout: post
 date: 2023-09-16
-title: "[C, C++] <cstdio>, “iostream”, “stdio.h” 설명 및 차이점
+title: "[C, C++] <cstdio>, “iostream”, “stdio.h” 설명 및 차이점"
 tags: [C, C++, ]
-categories: [Program Language, ]"
+categories: [Program Language, ]
 ---
 
 ## <stdio.h> - C
