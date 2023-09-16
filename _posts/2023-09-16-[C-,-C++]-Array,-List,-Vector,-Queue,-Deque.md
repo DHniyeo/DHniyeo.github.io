@@ -35,7 +35,6 @@ data[4] = 0;
 ```c++
 scanf("%d", &data[2]);
 printf("%d", data[0]);
-
 ```
 
 
@@ -67,7 +66,6 @@ myList.erase(myList.begin());        // 특정 위치의 요소 삭제
 for (int value : myList) {
     printf("%d", value);    // 리스트의 요소 출력
 }
-
 ```
 
 
@@ -97,7 +95,6 @@ myVector.pop_back();      // 벡터의 끝에서 요소 삭제
 for (int value : myVector) {
     printf("%d", value);    // 벡터의 요소 출력
 }
-
 ```
 
 
@@ -129,7 +126,6 @@ while (!myQueue.empty()) {
     myQueue.pop();
     printf("%d", value);    // 큐의 요소 출력
 }
-
 ```
 
 
@@ -161,7 +157,6 @@ while (!myDeque.empty()) {
     myDeque.pop_front();
     printf("%d", value);     // 덱의 요소 출력
 }
-
 ```
 
 
@@ -190,7 +185,6 @@ int main() {
 
   return 0;
 }
-
 ```
 
 
@@ -215,7 +209,6 @@ int main() {
 
   return 0;
 }
-
 ```
 
 
@@ -240,7 +233,6 @@ int main() {
 
   return 0;
 }
-
 ```
 
 
@@ -266,7 +258,6 @@ int main() {
 
   return 0;
 }
-
 ```
 
 
@@ -292,7 +283,6 @@ int main() {
 
   return 0;
 }
-
 ```
 
 
