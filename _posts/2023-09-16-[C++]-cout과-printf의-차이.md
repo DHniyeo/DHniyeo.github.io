@@ -60,10 +60,10 @@ cout에 비해 처리 속도가 빠르다. (일반적으로 cin/cout/endl이 sca
 출력 속도 : printf \n >cout \n > printf endl > cout endl
 
 
-[bookmark](https://www.acmicpc.net/blog/view/56)
+입력 속도 비교 : [https://www.acmicpc.net/blog/view/56](https://www.acmicpc.net/blog/view/56)
 
 
-[bookmark](https://www.acmicpc.net/blog/view/57)
+출력 속도 비교 : [https://www.acmicpc.net/blog/view/57](https://www.acmicpc.net/blog/view/57)
 
 
 ---

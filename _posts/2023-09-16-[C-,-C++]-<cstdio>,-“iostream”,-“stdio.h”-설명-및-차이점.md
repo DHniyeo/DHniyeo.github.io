@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-09-16
-title: "[C , C++] “cstdio”, “iostream”, “stdio.h” 설명 및 차이점"
+title: "[C , C++] <cstdio>, “iostream”, “stdio.h” 설명 및 차이점"
 tags: [C, C++, ]
 categories: [Program Language, ]
 ---
@@ -32,7 +32,7 @@ stdio.h는 C 프로그래밍 언어에서 사용되는 표준 라이브러리 �
 
 ## \<cstdio\> - C++
 
-- \<cstdio\>는 "C STandarD Input and Output"의 약자로, C언어의 <stdio.h>와 같은 헤더 파일입니다. <cstdio>은 입/출력과 관련된 C 함수들을 포함하고 있습니다.
+- \<cstdio\>는 "C STandarD Input and Output"의 약자로, C언어의 \<stdio.h\>와 같은 헤더 파일입니다. \<cstdio\>은 입/출력과 관련된 C 함수들을 포함하고 있습니다.
 
 ## \**<stdio.h\>와 \<cstdio\>의 차이점은 무엇인가요?**
 
@@ -91,7 +91,7 @@ int main()
 컴퓨터 기술에서 스트림은 **연속적인 데이터의 흐름 혹은 데이터를 전송하는 소프트웨어 모듈**을 일컫는다.
 
 
-![0](/assets/img/2023-09-16-[C-,-C++]-“cstdio”,-“iostream”,-“stdio.h”-설명-및-차이점.md/0.png)
+![0](/assets/img/2023-09-16-[C-,-C++]-<cstdio>,-“iostream”,-“stdio.h”-설명-및-차이점.md/0.png)
 
 
 C++ 표준에서는 오직 **스트림을 통한 입출력**만 지원한다.
@@ -106,7 +106,7 @@ C++ 표준에서는 오직 **스트림을 통한 입출력**만 지원한다.
 키보드에 연결된 cin 입력 스트림이 존재한다. 사용자가 입력한 'H', 'e', 'l', 'l', 'u' 키를 순서대로 저장하고 프로그램에게는 전달하지 않는다. 아직 사용자의 키 입력이 끝났다고 볼 수 없기 때문이다.
 
 
-![1](/assets/img/2023-09-16-[C-,-C++]-“cstdio”,-“iostream”,-“stdio.h”-설명-및-차이점.md/1.png)
+![1](/assets/img/2023-09-16-[C-,-C++]-<cstdio>,-“iostream”,-“stdio.h”-설명-및-차이점.md/1.png)
 
 
 사용자가 `<Backspace>` 키를 입력하면 가장 최근에 입력된 문자인 'u'를 버퍼에서 지울 수 있다. `<Backspace>` 키는 버퍼에 저장되는 대신 버퍼를 제어하는 **제어키**의 역할을 한다. 그리고 `<Enter>` 키를 입력하면 비로소 'LOVE' 문자들은 입력을 기다리고 있는 C++ 프로그램에게 전달된다.
@@ -118,7 +118,7 @@ C++ 표준에서는 오직 **스트림을 통한 입출력**만 지원한다.
 스크린에 연결된 cout 출력 스트림이 존재한다. 출력 스트림은 보통 **'\n'이 도착하거나 버퍼가 꽉 찰 때 스크린에 출력**시킨다.
 
 
-![2](/assets/img/2023-09-16-[C-,-C++]-“cstdio”,-“iostream”,-“stdio.h”-설명-및-차이점.md/2.png)
+![2](/assets/img/2023-09-16-[C-,-C++]-<cstdio>,-“iostream”,-“stdio.h”-설명-및-차이점.md/2.png)
 
 
 하지만 **cout.flush()** 명령을 내리면 출력 스트림은 버퍼에 있는 내용을 모두 장치에 출력한다.
@@ -148,10 +148,10 @@ C++ 입출력 스트림은 **운영체제 API(시스템 콜)를 호출하여 �
 과거 입출력 시스템은 영어와 같이 문자 하나를 한 바이트로 표현하는 언어의 문장만 입출력하도록 작성되었다. 문자 하나가 2바이트로 구성되는 한글 문자를 입력할 수 없었다.
 
 
-![3](/assets/img/2023-09-16-[C-,-C++]-“cstdio”,-“iostream”,-“stdio.h”-설명-및-차이점.md/3.png)
+![3](/assets/img/2023-09-16-[C-,-C++]-<cstdio>,-“iostream”,-“stdio.h”-설명-및-차이점.md/3.png)
 
 
-![4](/assets/img/2023-09-16-[C-,-C++]-“cstdio”,-“iostream”,-“stdio.h”-설명-및-차이점.md/4.png)
+![4](/assets/img/2023-09-16-[C-,-C++]-<cstdio>,-“iostream”,-“stdio.h”-설명-및-차이점.md/4.png)
 
 
 즉 **과거의 입출력 클래스들은 아래와 같으며 모두 문자를 한 바이트로만 다루는 클래스들이다.**
@@ -172,7 +172,7 @@ C++ 입출력 스트림은 **운영체제 API(시스템 콜)를 호출하여 �
 표준을 변했다 하더라도 **지금도 여전히 cin으로는 한글을 문자 단위로 읽을 수 없다.**
 
 
-![5](/assets/img/2023-09-16-[C-,-C++]-“cstdio”,-“iostream”,-“stdio.h”-설명-및-차이점.md/5.png)
+![5](/assets/img/2023-09-16-[C-,-C++]-<cstdio>,-“iostream”,-“stdio.h”-설명-및-차이점.md/5.png)
 
 
 _source: "명품 C++ 프로그래밍" / 황기태 / 생능출판_
