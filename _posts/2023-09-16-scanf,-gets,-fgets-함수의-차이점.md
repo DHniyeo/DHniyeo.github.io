@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-09-16
-title: (
+title: scanf, gets, fgets 함수의 차이점
 tags: [C, C++, ]
 categories: [Program Language, ]
 ---
