@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-09-16
-title: [C++] cout과 printf의 차이
+title: "[C++] cout과 printf의 차이"
 tags: [C++, ]
 categories: [Program Language, ]
 ---
