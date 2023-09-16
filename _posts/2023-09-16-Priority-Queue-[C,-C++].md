@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-09-16
-title: Priority Queue [12]
+title: Priority Queue [C, C++]
 tags: [C, C++, ]
 categories: [Program Language, ]
 ---
