@@ -14,7 +14,6 @@ categories: [Program Language, ]
 
 ```c++
 int data[100];
-
 ```
 
 
@@ -27,7 +26,6 @@ int data[100];
 ```c++
 data[2] = -1;
 data[4] = 0;
-
 ```
 
 

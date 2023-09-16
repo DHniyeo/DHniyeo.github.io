@@ -9,7 +9,7 @@ categories: [Program Language, ]
 # Priority Queue[(refer)](https://www.programiz.com/cpp-programming/priority-queue)
 
 
-[bookmark](https://jungeu1509.github.io/algorithm/use-priorityqueue/)
+[참고] : [https://jungeu1509.github.io/algorithm/use-priorityqueue/](https://jungeu1509.github.io/algorithm/use-priorityqueue/)
 
 
 우선순위 큐는 일반적인 큐와 달리, 각각의 원소가 우선순위를 가지고 있으며, 이에 따라 원소가 처리되는 자료구조입니다. C++ STL에서는 **`priority_queue`**라는 클래스를 제공하며, 이 클래스는 기본적으로 **최대 힙**을 기반으로 동작합니다.
