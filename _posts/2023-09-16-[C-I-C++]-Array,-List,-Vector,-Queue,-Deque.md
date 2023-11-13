@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-09-16
-title: "[C | C++] Array, List, Vector, Queue, Deque"
+title: "[C I C++] Array, List, Vector, Queue, Deque"
 tags: [C, C++, ]
 categories: [Program Language, ]
 ---

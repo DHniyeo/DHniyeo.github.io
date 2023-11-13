@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-09-25
-title: "[C | C++] Sort()함수와 Priority Queue정렬"
+title: "[C I C++] Sort()함수와 Priority Queue정렬"
 tags: [C, C++, ]
 categories: [Program Language, ]
 ---
