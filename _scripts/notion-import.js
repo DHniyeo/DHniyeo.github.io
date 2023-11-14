@@ -86,6 +86,7 @@ layout: post
 date: ${date}
 title: "${title}"${fmtags}${fmcats}
 ---
+
 `;
     const mdblocks = await n2m.pageToMarkdown(id);
     const md = n2m.toMarkdownString(mdblocks)["parent"];
@@ -94,7 +95,7 @@ title: "${title}"${fmtags}${fmcats}
 
     let index = 0;
     let edited_md = md.replace(
-      /(!\[\]\()(.*?)(\))/g,
+      /!\[(.*?)\]\((.*?)\)/g,
       function (match, p1, p2, p3) {
         const dirname = path.join("assets/img", ftitle);
         if (!fs.existsSync(dirname)) {
@@ -115,8 +116,11 @@ title: "${title}"${fmtags}${fmcats}
             console.log(error);
           });
 
-        return `![${index++}]` + `(/${filename})`; // avoid regex
-      }
+        let res;
+        if (p1 === "") res = "";
+        else res = `_${p1}_`;
+
+        return `![${index++}]` + `(/${filename})` + `${res}`;
     );
 
     //writing to file
