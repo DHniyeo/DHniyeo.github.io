@@ -121,6 +121,7 @@ title: "${title}"${fmtags}${fmcats}
         else res = `_${p1}_`;
 
         return `![${index++}]` + `(/${filename})` + `${res}`;
+      }
     );
 
     //writing to file
