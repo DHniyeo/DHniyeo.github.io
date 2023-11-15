@@ -1,7 +1,7 @@
 [DHniyeo Blog](https://dhniyeo.github.io/)
 ================================
 
-> I never expect this becomes popular.
+> Blog of DH yeo
 
 [User Manual 👉](_doc/Manual.md)
 --------------------------------------------------
