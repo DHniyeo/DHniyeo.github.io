@@ -61,6 +61,9 @@ LLM(Large Language Model)이 유행하고 있는 지금 인공지능에 대한 �
 
 # 🧠 예제
 
+
+간단한 예제를 통해 Transformers와 익숙해져 보기로 했다.
+
 1. transformers 설치
 
 > pip install transformers
@@ -75,10 +78,75 @@ LLM(Large Language Model)이 유행하고 있는 지금 인공지능에 대한 �
 아마 윈도우의 폴더 이름 길이인 256를 넘어서 문제가 발생하게 되는데, 이 문제는 다음과 같이 해결 하였다.
 
 
-[embed](https://dhniyeo.github.io/trouble%20shoot/2023/11/27/TroubleShoot-VisualStudio-Code-Tensorflow-%EC%84%A4%EC%B9%98-%EC%98%A4%EB%A5%98-(%EC%9C%88%EB%8F%84%EC%9A%B0-%ED%8F%B4%EB%8D%94-%EC%9D%B4%EB%A6%84-%EA%B8%B8%EC%9D%B4-256-%EC%B4%88%EA%B3%BC-%EB%AC%B8%EC%A0%9C)/)
-
-
 [https://dhniyeo.github.io/trouble shoot/2023/11/27/TroubleShoot-VisualStudio-Code-Tensorflow-설치-오류-(윈도우-폴더-이름-길이-256-초과-문제)/](https://dhniyeo.github.io/trouble%20shoot/2023/11/27/TroubleShoot-VisualStudio-Code-Tensorflow-%EC%84%A4%EC%B9%98-%EC%98%A4%EB%A5%98-(%EC%9C%88%EB%8F%84%EC%9A%B0-%ED%8F%B4%EB%8D%94-%EC%9D%B4%EB%A6%84-%EA%B8%B8%EC%9D%B4-256-%EC%B4%88%EA%B3%BC-%EB%AC%B8%EC%A0%9C)/)
 
-1. transformers에서 tokenizer, model 불러오기
-1. 불러온 tokenizer, model 사용하기
+1. Transformers 라이브러리의 가장 기본 객체는 `pipeline()` 함수 불러오기
+
+(이 함수는 모델에 있어서 필수 과정인 전처리와 후처리 과정을 모델과 연결하고, 우리가 바로 어떠한 텍스트 입력을 넣든 원하는 답을 얻을 수 있도록 한다)
+
+
+ex)
+
+
+```python
+from transformers import pipeline
+
+classifier = pipeline("sentiment-analysis")
+print(classifier("I've been waiting for a HuggingFace course my whole life."))
+```
+
+
+여기서 `classifier` 객체를 생성할 때 모델이 다운로드 되며 캐싱(caching)이 이루어지때문에, 재실행 시에는 캐싱된 모델을 사용하게 되어 모델을 다시 다운로드 하지 않는다.
+
+
+실행 시, 아래와 같은 경고가 뜰 수 있는데,
+
+
+![2](/assets/img/2023-11-27-[AI]-Hugging-Face-와-Transformers-모듈.md/2.png)
+
+
+pipline에 argument에 특정 모델을 넣어주지 않았으므로, distilbert-base-uncased-finetuned-sst-2-english 모델을 사용하겠다는 의미이다.
+
+
+그렇기 때문에 Hugging Face에 있는 특정 모델을 이용하고 싶다면 아래와 같이 사용할 수 있다.
+
+
+```python
+from transformers import pipeline
+
+model_id = "cardiffnlp/twitter-roberta-base-sentiment-latest"
+
+sentiment_pipe = pipeline("sentiment-analysis", model=model_id)
+print(sentiment_pipe('I love you'))
+```
+
+
+(cardiffnlp/twitter-roberta-base-sentiment-latest 라는 모델을 다운 받아 사용할 수 있다.)
+
+
+Transformers 모델을 사용하면 아래의 과정을 거치게 된다.
+
+	1. 텍스트를 모델이 이해 할 수 있게 전처리
+	2. 전처리 데이터를 모델의 입력으로 사용
+	3. 모델의 예측 값이 후처리를 거쳐 사람이 이해 가능 한 형태로 변환
+
+현재 사용할 수 있는 파이프라인은 다음과 같다.
+
+- `feature-extraction` : 특징 추출 (텍스트에 대한 벡터 표현 추출)
+- `fill-mask` : 마스크 채우기
+- `ner` : 개체명 인식 (named entity recognition)
+- `question-answering` : 질의 응답
+- `sentiment-analysis` : 감정 분석
+- `summarization` : 요약
+- `text-generation` : 텍스트 생성
+- `translation` : 번역
+- `zero-shot-classification` : 제로샷 분류
+
+---
+
+
+참고 사이트
+
+
+[https://huggingface.co/learn/nlp-course/ko/chapter1/3?fw=pt](https://huggingface.co/learn/nlp-course/ko/chapter1/3?fw=pt)
+
