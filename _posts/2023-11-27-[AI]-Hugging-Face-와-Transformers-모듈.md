@@ -2,7 +2,7 @@
 layout: post
 date: 2023-11-27
 title: "[AI] Hugging Face 와 Transformers 모듈"
-tags: [Python, ]
+tags: [Python, AI, ]
 categories: [AI, ]
 ---
 
