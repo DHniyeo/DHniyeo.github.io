@@ -75,7 +75,10 @@ LLM(Large Language Model)이 유행하고 있는 지금 인공지능에 대한 �
 아마 윈도우의 폴더 이름 길이인 256를 넘어서 문제가 발생하게 되는데, 이 문제는 다음과 같이 해결 하였다.
 
 
-[link_to_page](9d1a3b03-55c8-4f31-8ff0-383b0f5517f2)
+[embed](https://dhniyeo.github.io/trouble%20shoot/2023/11/27/TroubleShoot-VisualStudio-Code-Tensorflow-%EC%84%A4%EC%B9%98-%EC%98%A4%EB%A5%98-(%EC%9C%88%EB%8F%84%EC%9A%B0-%ED%8F%B4%EB%8D%94-%EC%9D%B4%EB%A6%84-%EA%B8%B8%EC%9D%B4-256-%EC%B4%88%EA%B3%BC-%EB%AC%B8%EC%A0%9C)/)
+
+
+[https://dhniyeo.github.io/trouble shoot/2023/11/27/TroubleShoot-VisualStudio-Code-Tensorflow-설치-오류-(윈도우-폴더-이름-길이-256-초과-문제)/](https://dhniyeo.github.io/trouble%20shoot/2023/11/27/TroubleShoot-VisualStudio-Code-Tensorflow-%EC%84%A4%EC%B9%98-%EC%98%A4%EB%A5%98-(%EC%9C%88%EB%8F%84%EC%9A%B0-%ED%8F%B4%EB%8D%94-%EC%9D%B4%EB%A6%84-%EA%B8%B8%EC%9D%B4-256-%EC%B4%88%EA%B3%BC-%EB%AC%B8%EC%A0%9C)/)
 
 1. transformers에서 tokenizer, model 불러오기
 1. 불러온 tokenizer, model 사용하기
