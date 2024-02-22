@@ -6,12 +6,6 @@ tags: [PJT, Notion, web, ]
 categories: [PJT, Notion, Web, ]
 ---
 
-2023-11-10 
-
-
----
-
-
 # 📎 Notion 환경 설정
 
 
