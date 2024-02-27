@@ -100,7 +100,10 @@ cxfreeze my_script.py --target-dir output
 ---
 
 
-참고 :  [https://jcstory94.tistory.com/103](https://jcstory94.tistory.com/103)
+참고 :  
+
+
+[https://jcstory94.tistory.com/103](https://jcstory94.tistory.com/103)
 
 
 [PyInstaller 공식 문서](https://pyinstaller.readthedocs.io/en/stable/)
