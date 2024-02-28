@@ -46,7 +46,9 @@ categories: [PJT, Notion, Web, ]
 그리고 링크 복사 라는 부분을 클릭하면 아래와 같은 데이터 포맷으로 링크가 복사 된다.
 
 
-> [https://www.notion.so/](https://www.notion.so/)<database_id>?v=<long_hash>
+```javascript
+[https://www.notion.so/](https://www.notion.so/)<database_id>?v=<long_hash>
+```
 
 
 여기서 **database_id** 를 안전한 곳에 보관해둔다.
