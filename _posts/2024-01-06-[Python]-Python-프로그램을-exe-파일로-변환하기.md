@@ -111,3 +111,6 @@ cxfreeze my_script.py --target-dir output
 
 [cx_Freeze 공식 문서](https://cx-freeze.readthedocs.io/en/latest/)
 
+
+#Python#exe#Python exe파일 변환
+
