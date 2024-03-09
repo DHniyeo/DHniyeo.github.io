@@ -86,6 +86,9 @@ pyinstaller --onefile my_script.py
 
 ```shell
 cxfreeze my_script.py --target-dir output
+
+# 아이콘 모양 변경
+cxfreeze my_script.py --target-dir output --icon=icon_file.ico 
 ```
 
 
