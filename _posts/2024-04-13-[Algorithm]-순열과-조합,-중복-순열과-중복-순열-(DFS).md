@@ -104,18 +104,6 @@ int main() {
 ![0](/assets/img/2024-04-13-[Algorithm]-순열과-조합,-중복-순열과-중복-순열-(DFS).md/0.png)
 
 
-![1](/assets/img/2024-04-13-[Algorithm]-순열과-조합,-중복-순열과-중복-순열-(DFS).md/1.png)
-
-
-![2](/assets/img/2024-04-13-[Algorithm]-순열과-조합,-중복-순열과-중복-순열-(DFS).md/2.png)
-
-
-![3](/assets/img/2024-04-13-[Algorithm]-순열과-조합,-중복-순열과-중복-순열-(DFS).md/3.png)
-
-
-![4](/assets/img/2024-04-13-[Algorithm]-순열과-조합,-중복-순열과-중복-순열-(DFS).md/4.png)
-
-
 # 정리
 
 
