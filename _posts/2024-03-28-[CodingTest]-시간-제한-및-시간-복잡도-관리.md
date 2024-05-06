@@ -3,7 +3,7 @@ layout: post
 date: 2024-03-28
 title: "[CodingTest] 시간 제한 및 시간 복잡도 관리"
 tags: [CS, ]
-categories: [CodingTest, Computer Science, ]
+categories: [CodingTest, ]
 ---
 
 # 시간 제한과 시간 복잡도

@@ -2,8 +2,8 @@
 layout: post
 date: 2024-04-26
 title: "[Algorithm] 기본 정렬 알고리즘 Sorting"
-tags: [C++, ]
-categories: [Algorithm, CodingTest, ]
+tags: [C++, CS, ]
+categories: [Algorithm, Computer Science, ]
 ---
 
 # 개요
