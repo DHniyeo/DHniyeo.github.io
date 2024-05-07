@@ -84,8 +84,8 @@ disqus_username: dhyeo
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_track_id: 'G-CGSCJFM6VR'            # Format: UA-49627206-1
+ga_domain: ''                          # Format: huangxuan.me
 
 
 
