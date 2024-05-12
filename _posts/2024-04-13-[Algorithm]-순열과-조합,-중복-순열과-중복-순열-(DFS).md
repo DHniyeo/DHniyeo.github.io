@@ -6,15 +6,20 @@ tags: [Algorithm-구현, C++, Algorithm-DFS/BFS, ]
 categories: [Algorithm, Samsung기출, CodingTest, ]
 ---
 
-# 개요
+
+
+## 개요
 
 
 코딩 문제를 보다 보면 DFS를 활용하는 문제에서 순열, 조합, 중복순열, 중복 조합이 등장한다. 그래서 한번 정리를 하게 되었다.
 
 
-# 코드
+
+## 코드
 
 
+
+{% raw %}
 ```c++
 #include <iostream>
 #include <vector>
@@ -96,6 +101,8 @@ int main() {
 	dfs_combi_repetition(0,0); // 중복 조합
 }
 ```
+{% endraw %}
+
 
 
 결과는 다음과 같다
@@ -104,15 +111,20 @@ int main() {
 ![0](/assets/img/2024-04-13-[Algorithm]-순열과-조합,-중복-순열과-중복-순열-(DFS).md/0.png)
 
 
-# 정리
+
+## 정리
 
 
+
+{% raw %}
 ```c++
 void dfs_permu(int depth) // 순열 : visited[]있음
 void dfs_combi(int depth,int idx) // 조합 : visited[]있음, idx 변수 추가
 void dfs_permu_repetition(int depth) // 중복 순열 : visited[]없음
 void dfs_combi_repetition(int depth, int idx) // 중복 조합 : visited[]없음, idx 변수 추가
 ```
+{% endraw %}
+
 
 
 visited는 중복 되는 순열이나 조합을 뽑지 않기 위해 체크하는 배열.

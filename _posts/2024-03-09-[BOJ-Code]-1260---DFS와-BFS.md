@@ -6,6 +6,7 @@ tags: [Algorithm-DFS/BFS, ]
 categories: [CodingTest, ]
 ---
 
+
 [문제 링크](https://www.acmicpc.net/problem/1260)
 
 
@@ -15,6 +16,8 @@ categories: [CodingTest, ]
 > **Memory   1392KB                                   Time   4ms                               Code Length   1186B**
 
 
+
+{% raw %}
 ```c++
 #include <stdio.h>
 #include <queue>
@@ -85,6 +88,8 @@ int main()
 	printf("\n");
 }
 ```
+{% endraw %}
+
 
 
 이 코드는 DFS(Depth First Search)와 BFS(Breadth First Search) 알고리즘을 사용하여 그래프를 탐색하는 프로그램이다.

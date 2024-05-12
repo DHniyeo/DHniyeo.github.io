@@ -6,7 +6,9 @@ tags: [C++, CS, ]
 categories: [Algorithm, Computer Science, ]
 ---
 
-# 개요
+
+
+## 개요
 
 
 코딩 테스트에도 간혹 등장하고 정렬하는 모든 방법을 정리해보고자 한다.
@@ -21,7 +23,8 @@ categories: [Algorithm, Computer Science, ]
 따라서 **O(n*logn)**의 시간 복잡도를 항상 만족한다.
 
 
-# 1. 삽입 정렬 (Insertion sort)
+
+## 1. 삽입 정렬 (Insertion sort)
 
 
 ![0](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/0.png)
@@ -30,6 +33,8 @@ categories: [Algorithm, Computer Science, ]
 삽입 정렬은 마치 카드 게임에서 카드를 정렬하는 것과 비슷합니다. 이미 정렬된 부분과 비교하여 하나씩 삽입하면서 정렬하는 방식입니다.
 
 
+
+{% raw %}
 ```c++
   """ Best: O(n) Average: O(n^2) Worst: O(n^2) | O(n) """
 void insertionSort(int arr[], int n) {
@@ -44,6 +49,8 @@ void insertionSort(int arr[], int n) {
   }
 }
 ```
+{% endraw %}
+
 
 
 장점:
@@ -57,7 +64,8 @@ void insertionSort(int arr[], int n) {
 - 다른 정렬 알고리즘들보다 느린 속도입니다.
 - O(n^2)의 시간 복잡도를 가지고 있습니다.
 
-# 2. 선택 정렬 (Selection sort)
+
+## 2. 선택 정렬 (Selection sort)
 
 
 ![1](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/1.png)
@@ -66,6 +74,8 @@ void insertionSort(int arr[], int n) {
 선택 정렬은 가장 작은 요소를 반복적으로 찾아 정렬된 위치에 삽입하는 방식입니다.
 
 
+
+{% raw %}
 ```c++
 """ Best: O(n^2) Average: O(n^2) Worst: O(n^2) | O(N^2) """
 void selectionSort(int arr[], int n) {
@@ -79,6 +89,8 @@ void selectionSort(int arr[], int n) {
   }
 }
 ```
+{% endraw %}
+
 
 
 장점:
@@ -91,7 +103,8 @@ void selectionSort(int arr[], int n) {
 - 다른 정렬 알고리즘들보다 느린 속도입니다.
 - O(n^2)의 시간 복잡도를 가지고 있습니다.
 
-# 3. 버블 정렬 (Bubble sort)
+
+## 3. 버블 정렬 (Bubble sort)
 
 
 ![2](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/2.png)
@@ -100,6 +113,8 @@ void selectionSort(int arr[], int n) {
 버블 정렬은 인접한 두 요소를 비교하여 큰 값이 뒤쪽으로 이동하도록 반복적으로 교환하는 방식입니다. 마치 물속의 거품이 위로 올라가는 것처럼 큰 값이 점차적으로 올라가는 모습을 띕니다.
 
 
+
+{% raw %}
 ```c++
 """ Best: O(n^2) Average: O(n^2) Worst: O(n^2) | O(n) """
 void bubbleSort(int arr[], int n) {
@@ -112,6 +127,8 @@ void bubbleSort(int arr[], int n) {
   }
 }
 ```
+{% endraw %}
+
 
 
 장점:
@@ -124,7 +141,8 @@ void bubbleSort(int arr[], int n) {
 - 다른 정렬 알고리즘들보다 느린 속도입니다.
 - O(n^2)의 시간 복잡도를 가지고 있습니다.
 
-# 4. 퀵 정렬 (Quick sort)
+
+## 4. 퀵 정렬 (Quick sort)
 
 
 ![3](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/3.png)
@@ -137,6 +155,8 @@ void bubbleSort(int arr[], int n) {
 3. **재귀적 호출:** 왼쪽과 오른쪽 부분 배열을 다시 퀵 정렬 알고리즘을 사용하여 재귀적으로 정렬합니다.
 4. **합병:** 정렬된 왼쪽, 오른쪽 부분 배열을 합쳐 하나의 정렬된 배열을 만듭니다.
 
+
+{% raw %}
 ```c++
 """ Best: O(nlogn) Average: O(nlogn) Worst: O(n^2) | O(nlogn) """
 void quickSort(int arr[], int low, int high) {
@@ -161,6 +181,8 @@ int partition(int arr[], int low, int high) {
   return (i + 1);
 }
 ```
+{% endraw %}
+
 
 
 **장점:**
@@ -173,7 +195,8 @@ int partition(int arr[], int low, int high) {
 - 최악의 경우 O(n^2)의 시간 복잡도 (피벗 요소가 최소 또는 최대값인 경우)
 - 불안정한 알고리즘 (같은 값을 가진 요소들의 순서가 변경될 수 있음)
 
-# 5. 병합 정렬 (Merge sort)
+
+## 5. 병합 정렬 (Merge sort)
 
 
 ![4](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/4.png)
@@ -188,6 +211,8 @@ int partition(int arr[], int low, int high) {
 퀵 정렬이 피봇 선택 이후 피봇 기준으로 대소를 비교하는 반면, 병합 정렬은 배열을 원소가 하나만 남을 때 까지 계속 이분할 한 다음, 대소관계를 고려하여 다시 재배열 하며 원래 크기의 배열로 병합한다.
 
 
+
+{% raw %}
 ```c++
 """ Best: O(nlogn) Average: O(nlogn) Worst: O(nlogn) | O(n) """
 void mergeSort(int arr[], int low, int high) {
@@ -211,6 +236,8 @@ void merge(int arr[], int low, int mid, int high) {
 
   int i = 0, j = 0, k = low;
 ```
+{% endraw %}
+
 
 
 **장점:**
@@ -224,7 +251,8 @@ void merge(int arr[], int low, int mid, int high) {
 - 퀵 정렬보다 느린 속도 (일반적으로)
 - 추가 공간이 필요합니다.
 
-# 6. **힙 정렬 (Heap Sort)**
+
+## 6. **힙 정렬 (Heap Sort)**
 
 
 ![5](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/5.png)
@@ -233,6 +261,8 @@ void merge(int arr[], int low, int mid, int high) {
 힙 정렬은 데이터를 힙 구조로 변환하고, 힙에서 최대값을 반복적으로 추출하여 정렬하는 알고리즘입니다. 힙은 특정 조건을 만족하는 완전 이진 트리 구조입니다.
 
 
+
+{% raw %}
 ```c++
 """ Best: O(nlogn) Average: O(nlogn) Worst: O(nlogn) | O(nlogn) """
 void heapSort(int arr[], int n) {
@@ -263,6 +293,8 @@ void heapify(int arr[], int i, int end) {
   }
 }
 ```
+{% endraw %}
+
 
 
 **장점:**
@@ -275,7 +307,8 @@ void heapify(int arr[], int i, int end) {
 - 최악의 경우 O(n log n)의 시간 복잡도
 - 불안정한 알고리즘 (같은 값을 가진 요소들의 순서가 변경될 수 있음)
 
-# **7. 셸 정렬 (Shell Sort)**
+
+## **7. 셸 정렬 (Shell Sort)**
 
 
 ![6](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/6.png)
@@ -284,6 +317,8 @@ void heapify(int arr[], int i, int end) {
 셸 정렬은 삽입 정렬의 변형으로, 데이터 간의 간격을 점차 줄여 삽입 정렬을 반복적으로 수행하는 알고리즘입니다. 간격은 일반적으로 쉘 시퀀스(Shell sequence)라고 불리는 특정 수열을 사용합니다.
 
 
+
+{% raw %}
 ```c++
 """ Best: O(n) Average: O(n^1.25,1.5) Worst: O(n^2) | O(n) """
 void shellSort(int arr[], int n) {
@@ -300,6 +335,8 @@ void shellSort(int arr[], int n) {
   }
 }
 ```
+{% endraw %}
+
 
 
 **장점:**
@@ -318,7 +355,8 @@ void shellSort(int arr[], int n) {
 - 적절한 쉘 시퀀스를 선택하는 것이 중요합니다. 일반적으로 2의 거듭제곱 시퀀스 또는 위에 제시된 시퀀스와 같은 시퀀스를 사용할 수 있습니다.
 - 셸 정렬은 작은 데이터 세트에 효율적이지만, 매우 큰 데이터 세트에는 다른 정렬 알고리즘을 사용하는 것이 더 나을 수 있습니다.
 
-# **8. 기수 정렬 (Radix Sort)**
+
+## **8. 기수 정렬 (Radix Sort)**
 
 
 ![7](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/7.png)
@@ -327,6 +365,8 @@ void shellSort(int arr[], int n) {
 기수 정렬은 데이터의 자릿수를 기준으로 정렬하는 알고리즘입니다. 특히 숫자 데이터를 정렬하는 데 효율적이며, 입력 데이터의 범위가 제한될 때 유용합니다.
 
 
+
+{% raw %}
 ```c++
 """ Best: O(n) Average: O(n) Worst: O(n)"""
 void radixSort(int arr[], int n) {
@@ -365,8 +405,9 @@ void countingSort(int arr[], int n, int digit) {
     }
   }
 }
-
 ```
+{% endraw %}
+
 
 - `findMaxDigit` 함수는 배열 내 모든 요소의 최대 자릿수를 찾습니다.
 - `radixSort` 함수는 자릿수별로 반복적으로 countingSort를 수행합니다.
@@ -389,7 +430,8 @@ void countingSort(int arr[], int n, int digit) {
 - 입력 데이터의 범위가 제한되어야 합니다. 예를 들어, 음수를 포함하는 데이터를 정렬하려면 음수 값을 양수 값으로 변환해야 합니다.
 - 기수 정렬은 매우 큰 데이터 세트에 효율적이지만, 작은 데이터 세트에는 다른 정렬 알고리즘을 사용하는 것이 더 나을 수 있습니다.
 
-# **9. 카운팅 정렬 (Counting Sort)**
+
+## **9. 카운팅 정렬 (Counting Sort)**
 
 
 ![8](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/8.png)
@@ -398,6 +440,8 @@ void countingSort(int arr[], int n, int digit) {
 카운팅 정렬은 입력 데이터의 범위가 제한될 때 효율적인 정렬 알고리즘입니다. 데이터의 각 요소에 대한 카운터를 사용하여 데이터를 정렬하는 방식입니다.
 
 
+
+{% raw %}
 ```c++
 """ Best: O(n) Average: O(n+k) Worst: O(n+k) | O(n+k) """
 void countingSort(int arr[], int n, int min, int max) {
@@ -411,6 +455,8 @@ void countingSort(int arr[], int n, int min, int max) {
       arr[z++] = i; // 카운터 값만큼 동일한 값 삽입
 }
 ```
+{% endraw %}
+
 
 
 **장점:**
@@ -425,7 +471,8 @@ void countingSort(int arr[], int n, int min, int max) {
 - 문자열이나 실수와 같이 다양한 값을 가진 데이터에는 적합하지 않음
 - 큰 범위의 데이터에는 공간 비효율적일 수 있음
 
-# **10. Tim Sort**
+
+## **10. Tim Sort**
 
 
 ![9](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/9.png)
@@ -443,6 +490,8 @@ CPU가 빠른 연산을 위해 사용하는 캐시 메모리에 데이터를 담
 - **삽입 정렬:** 각 서브 블록은 삽입 정렬을 사용하여 정렬됩니다. 삽입 정렬은 작은 데이터 세트에 효율적이기 때문에 이 단계에서 성능을 향상시킵니다.
 - **병합:** 정렬된 서브 블록들을 병합하여 최종적으로 정렬된 배열을 구성합니다. 병합 과정에서 병합 정렬 알고리즘을 사용합니다. 병합 정렬은 큰 데이터 세트에 효율적이기 때문에 이 단계에서 성능을 향상 시킵니다.
 
+
+{% raw %}
 ```c++
 """ Best: O(n) Average: O(nlogn) Worst: O(nlogn) | O(n) """
 void insertionSort(int arr[], int start, int end) {
@@ -523,6 +572,8 @@ void timSort(int arr[], int n) {
   }
 }
 ```
+{% endraw %}
+
 
 
 **장점:**
@@ -546,7 +597,8 @@ void timSort(int arr[], int n) {
 ---
 
 
-# 정리
+
+## 정리
 
 
 ![10](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/10.png)
