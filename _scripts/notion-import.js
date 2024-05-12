@@ -11,6 +11,33 @@ const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
 
+function escapeCodeBlock(body) {
+  const regex = /```([\s\S]*?)```/g;
+  return body.replace(regex, function (match, htmlBlock) {
+    return "\n{% raw %}\n```" + htmlBlock.trim() + "\n```\n{% endraw %}\n";
+  });
+}
+
+function replaceTitleOutsideRawBlocks(body) {
+  const rawBlocks = [];
+  const placeholder = "%%RAW_BLOCK%%";
+  body = body.replace(/{% raw %}[\s\S]*?{% endraw %}/g, (match) => {
+    rawBlocks.push(match);
+    return placeholder;
+  });
+
+  const regex = /\n#[^\n]+\n/g;
+  body = body.replace(regex, function (match) {
+    return "\n" + match.replace("\n#", "\n##");
+  });
+
+  rawBlocks.forEach(block => {
+    body = body.replace(placeholder, block);
+  });
+
+  return body;
+}
+
 // passing notion client to the option
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
@@ -20,8 +47,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
   fs.mkdirSync(root, { recursive: true });
 
   const databaseId = process.env.DATABASE_ID;
-  // TODO has_more
-  const response = await notion.databases.query({
+  let response = await notion.databases.query({
     database_id: databaseId,
     filter: {
       property: "공개",
@@ -30,8 +56,24 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
       },
     },
   });
-  for (const r of response.results) {
-    // console.log(r)
+
+  const pages = response.results;
+  while (response.has_more) {
+    const nextCursor = response.next_cursor;
+    response = await notion.databases.query({
+      database_id: databaseId,
+      start_cursor: nextCursor,
+      filter: {
+        property: "공개",
+        checkbox: {
+          equals: true,
+        },
+      },
+    });
+    pages.push(...response.results);
+  }
+
+  for (const r of pages) {
     const id = r.id;
     // date
     let date = moment(r.created_time).format("YYYY-MM-DD");
@@ -86,15 +128,21 @@ layout: post
 date: ${date}
 title: "${title}"${fmtags}${fmcats}
 ---
+
 `;
     const mdblocks = await n2m.pageToMarkdown(id);
-    const md = n2m.toMarkdownString(mdblocks)["parent"];
+    let md = n2m.toMarkdownString(mdblocks)["parent"];
+    if (md === "") {
+      continue;
+    }
+    md = escapeCodeBlock(md);
+    md = replaceTitleOutsideRawBlocks(md);
 
     const ftitle = `${date}-${title.replaceAll(" ", "-")}.md`;
 
     let index = 0;
     let edited_md = md.replace(
-      /(!\[\]\()(.*?)(\))/g,
+      /!\[(.*?)\]\((.*?)\)/g,
       function (match, p1, p2, p3) {
         const dirname = path.join("assets/img", ftitle);
         if (!fs.existsSync(dirname)) {
@@ -115,7 +163,11 @@ title: "${title}"${fmtags}${fmcats}
             console.log(error);
           });
 
-        return `![${index++}]` + `(/${filename})`; // avoid regex
+        let res;
+        if (p1 === "") res = "";
+        else res = `_${p1}_`;
+
+        return `![${index++}](/${filename})${res}`;
       }
     );
 
