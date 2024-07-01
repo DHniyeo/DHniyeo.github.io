@@ -27,7 +27,7 @@ categories: [Algorithm, Computer Science, ]
 ## 1. 삽입 정렬 (Insertion sort)
 
 
-![0](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/0.png)_insert.gif_
+![0](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/0.png)
 
 
 삽입 정렬은 마치 카드 게임에서 카드를 정렬하는 것과 비슷합니다. 이미 정렬된 부분과 비교하여 하나씩 삽입하면서 정렬하는 방식입니다.
@@ -68,7 +68,7 @@ void insertionSort(int arr[], int n) {
 ## 2. 선택 정렬 (Selection sort)
 
 
-![1](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/1.png)_select-min.gif_
+![1](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/1.png)
 
 
 선택 정렬은 가장 작은 요소를 반복적으로 찾아 정렬된 위치에 삽입하는 방식입니다.
@@ -107,7 +107,7 @@ void selectionSort(int arr[], int n) {
 ## 3. 버블 정렬 (Bubble sort)
 
 
-![2](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/2.png)_bubble-min.gif_
+![2](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/2.png)
 
 
 버블 정렬은 인접한 두 요소를 비교하여 큰 값이 뒤쪽으로 이동하도록 반복적으로 교환하는 방식입니다. 마치 물속의 거품이 위로 올라가는 것처럼 큰 값이 점차적으로 올라가는 모습을 띕니다.
@@ -145,7 +145,7 @@ void bubbleSort(int arr[], int n) {
 ## 4. 퀵 정렬 (Quick sort)
 
 
-![3](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/3.png)_quick-min.gif_
+![3](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/3.png)
 
 
 퀵 정렬은 분할 정복(Divide and Conquer) 알고리즘으로, 다음과 같은 방식으로 작동합니다.
@@ -199,7 +199,7 @@ int partition(int arr[], int low, int high) {
 ## 5. 병합 정렬 (Merge sort)
 
 
-![4](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/4.png)_merge-min.gif_
+![4](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/4.png)
 
 - **분할:** 입력 배열을 절반 크기의 두 개의 부분 배열로 분할합니다.
 - **재귀적 호출:** 두 부분 배열을 각각 재귀적으로 병합 정렬 알고리즘을 사용하여 정렬합니다.
@@ -255,7 +255,7 @@ void merge(int arr[], int low, int mid, int high) {
 ## 6. **힙 정렬 (Heap Sort)**
 
 
-![5](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/5.png)_heap-min.gif_
+![5](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/5.png)
 
 
 힙 정렬은 데이터를 힙 구조로 변환하고, 힙에서 최대값을 반복적으로 추출하여 정렬하는 알고리즘입니다. 힙은 특정 조건을 만족하는 완전 이진 트리 구조입니다.
@@ -311,7 +311,7 @@ void heapify(int arr[], int i, int end) {
 ## **7. 셸 정렬 (Shell Sort)**
 
 
-![6](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/6.png)_20210707133409-min.gif_
+![6](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/6.png)
 
 
 셸 정렬은 삽입 정렬의 변형으로, 데이터 간의 간격을 점차 줄여 삽입 정렬을 반복적으로 수행하는 알고리즘입니다. 간격은 일반적으로 쉘 시퀀스(Shell sequence)라고 불리는 특정 수열을 사용합니다.
@@ -359,7 +359,7 @@ void shellSort(int arr[], int n) {
 ## **8. 기수 정렬 (Radix Sort)**
 
 
-![7](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/7.png)_radix-min.gif_
+![7](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/7.png)
 
 
 기수 정렬은 데이터의 자릿수를 기준으로 정렬하는 알고리즘입니다. 특히 숫자 데이터를 정렬하는 데 효율적이며, 입력 데이터의 범위가 제한될 때 유용합니다.
@@ -434,7 +434,7 @@ void countingSort(int arr[], int n, int digit) {
 ## **9. 카운팅 정렬 (Counting Sort)**
 
 
-![8](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/8.png)_counting-min.gif_
+![8](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/8.png)
 
 
 카운팅 정렬은 입력 데이터의 범위가 제한될 때 효율적인 정렬 알고리즘입니다. 데이터의 각 요소에 대한 카운터를 사용하여 데이터를 정렬하는 방식입니다.
@@ -475,7 +475,7 @@ void countingSort(int arr[], int n, int min, int max) {
 ## **10. Tim Sort**
 
 
-![9](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/9.png)_Untitled.png_
+![9](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/9.png)
 
 
 Tim sort는 병합 정렬과 삽입 정렬을 결합한 하이브리드 정렬 알고리즘입니다. Python, Java 등 많은 프로그래밍 언어에서 기본 정렬 알고리즘으로 사용됩니다.
@@ -601,7 +601,7 @@ void timSort(int arr[], int n) {
 ## 정리
 
 
-![10](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/10.png)_Untitled.png_
+![10](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/10.png)
 
 
 다른종류의 sort를 더 알아보고 싶다면 아래 위키피디아를 참고 하면될거같다. 엄청나게 많은 sort가 존재한다.
