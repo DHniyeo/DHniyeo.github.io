@@ -40,20 +40,20 @@ categories: [Trouble Shoot, ]
 
 1. 윈도우 → 고급 시스템 설정 보기
 
-	![0](/assets/img/2023-12-17-[TroubleShoot]-window-11-pyinstaller-설치-오류.md/0.png)
+	![0](/assets/img/2023-12-17-[TroubleShoot]-window-11-pyinstaller-설치-오류.md/0.png)_Untitled.png_
 
 2. 고급 → 환경변수
 
-	![1](/assets/img/2023-12-17-[TroubleShoot]-window-11-pyinstaller-설치-오류.md/1.png)
+	![1](/assets/img/2023-12-17-[TroubleShoot]-window-11-pyinstaller-설치-오류.md/1.png)_Untitled.png_
 
 3. 시스템 변수 Path 편집
 
-	![2](/assets/img/2023-12-17-[TroubleShoot]-window-11-pyinstaller-설치-오류.md/2.png)
+	![2](/assets/img/2023-12-17-[TroubleShoot]-window-11-pyinstaller-설치-오류.md/2.png)_Untitled.png_
 
 4. 경로 추가 → 확인
 
 vscode를 껐다가 켜서 pyinstaller 명령을 사용해보면 해결완료!!
 
 
-![3](/assets/img/2023-12-17-[TroubleShoot]-window-11-pyinstaller-설치-오류.md/3.png)
+![3](/assets/img/2023-12-17-[TroubleShoot]-window-11-pyinstaller-설치-오류.md/3.png)_Untitled.png_
 

@@ -20,7 +20,7 @@ categories: [PJT, Notion, Web, ]
 [https://www.notion.so/my-integrations](https://www.notion.so/my-integrations)
 
 
-![0](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/0.png)
+![0](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/0.png)_Untitled.png_
 
 
 블로그에 자동 포스팅 할 본인의 워크 스페이스의 통합 API를 생성하고 
@@ -33,13 +33,13 @@ categories: [PJT, Notion, Web, ]
 아래와 같은 템플릿을 생성한다. 노션에서 DB테이블을 생성하는 것이다.
 
 
-![1](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/1.png)
+![1](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/1.png)_Untitled.png_
 
 
 > 💡 노션 DataBase ID 구하기
 
 
-![2](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/2.png)
+![2](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/2.png)_Untitled.png_
 
 
 생성한 DB 테이블에서 오른쪽 위 … 버튼을 누르면 통합 api를 연결 하는 부분이 있는데, 방금 만든 통합api를 연결 해준다.
@@ -67,7 +67,7 @@ categories: [PJT, Notion, Web, ]
 > 💡 Github에서 환경변수 등록하기
 
 
-![3](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/3.png)
+![3](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/3.png)_Untitled.png_
 
 
 이제 자신의 Jekyll 블로그의 Setting > Secrets and variables > Actions 에서 New repository secret을 클릭해 위의 노션에서 얻은 Notion 시크릿 키(NOTION_TOKEN), DataBase ID(DATABASE_ID)를 등록 해준다.
@@ -503,16 +503,13 @@ dispatch를 이용하면 버튼을 눌러서 게시글 업데이트를 진행할
 먼저, Github AccessToken을 생성해주어야 한다.
 
 
-![5](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/5.png)
+![5](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/5.png)_Untitled.png_
 
 
-![6](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/6.png)
+![6](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/6.png)_Untitled.png_
 
 
-![7](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/7.png)
-
-
-![8](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/8.png)
+![7](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/7.png)_Untitled.png_
 
 
 `Settings`→`Developer settings`→`Personal access tokens`로 들어가서 새 토큰을 생성해준다.
@@ -550,13 +547,10 @@ html 코드는 아래와 같다.
 노션에서 쓸 수 있도록 html코드를 링크로 변환 시켰다면 해당 링크를 노션 페이지에서 임베드를 통해 연결한다.
 
 
-![9](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/9.png)
+![8](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/8.png)_Untitled.png_
 
 
-![10](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/10.png)
-
-
-![11](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/11.png)
+![9](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/9.png)_Untitled.png_
 
 
 > 💡 테스트 하기
@@ -565,7 +559,7 @@ html 코드는 아래와 같다.
 정상적으로 잘된다면 갱신 버튼을 누른 후 Repository에서 Actions 부분에 들어가면 아래와 같이 정상적으로 동작이 완료된다.
 
 
-![12](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/12.png)
+![10](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/10.png)_Untitled.png_
 
 
 여기까지가 Notion에서 버튼을 통해 Gitblog 게시물을 자동 업로드 하는 방법이다.
@@ -574,7 +568,7 @@ html 코드는 아래와 같다.
 > 💡 요약
 
 
-![13](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/13.png)
+![11](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/11.png)_Untitled.png_
 
 - _scripts/notion-import.js : Notion API, **`notion-to-md`**라이브러리 및 기타 종속성을 사용하여 Notion 데이터베이스 항목을 Markdown 파일로 변환합니다.
 - .github/workflows/pages-deploy.yml : 이 GitHub Actions 워크플로는 Notion 데이터베이스의 변경 사항을 기반으로 Jekyll 사이트의 구축 및 배포 프로세스를 자동화하도록 설계되었습니다.

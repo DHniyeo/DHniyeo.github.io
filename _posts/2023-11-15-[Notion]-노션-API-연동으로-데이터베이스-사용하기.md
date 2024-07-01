@@ -17,7 +17,7 @@ categories: [PJT, Notion, Web, ]
 [https://www.notion.so/my-integrations](https://www.notion.so/my-integrations)
 
 
-![0](/assets/img/2023-11-15-[Notion]-노션-API-연동으로-데이터베이스-사용하기.md/0.png)
+![0](/assets/img/2023-11-15-[Notion]-노션-API-연동으로-데이터베이스-사용하기.md/0.png)_Untitled.png_
 
 
 블로그에 자동 포스팅 할 본인의 워크 스페이스의 통합 API를 생성하고
@@ -30,7 +30,7 @@ categories: [PJT, Notion, Web, ]
 ## 🐿️ 데이터 베이스 생성하기
 
 
-![1](/assets/img/2023-11-15-[Notion]-노션-API-연동으로-데이터베이스-사용하기.md/1.png)
+![1](/assets/img/2023-11-15-[Notion]-노션-API-연동으로-데이터베이스-사용하기.md/1.png)_Untitled.png_
 
 
 DB로 사용할 페이지에서 방금 생성한 통합 API를 연결 해준다.
@@ -61,12 +61,12 @@ DB로 사용할 페이지에서 방금 생성한 통합 API를 연결 해준다.
 > https://api.notion.com/v1/databases/{{**database_id**}}/query
 
 
-![2](/assets/img/2023-11-15-[Notion]-노션-API-연동으로-데이터베이스-사용하기.md/2.png)
+![2](/assets/img/2023-11-15-[Notion]-노션-API-연동으로-데이터베이스-사용하기.md/2.png)_Untitled.png_
 
 1. POST 로 설정한 뒤, database_id 부분에 아까 저장한 database_id를 넣는다.
 2. Headers를 클릭한 후 Notion DB를 불러오기에 필요한 파라미터 3개를 입력해준다.
 
-	![3](/assets/img/2023-11-15-[Notion]-노션-API-연동으로-데이터베이스-사용하기.md/3.png)
+	![3](/assets/img/2023-11-15-[Notion]-노션-API-연동으로-데이터베이스-사용하기.md/3.png)_Untitled.png_
 
 
 파라미터는 다음과 같다.
@@ -80,9 +80,9 @@ Bearer {{api 시크릿 키}}                                                    
 [https://developers.notion.com/reference/changes-by-version](https://developers.notion.com/reference/changes-by-version) |
 | **Content-Type**   | application/json                                                                                                                                                                 |
 
-undefined1. Send 버튼을 누르면 Body에서 데이터 구조를 확인 할 수 있다.
+1. Send 버튼을 누르면 Body에서 데이터 구조를 확인 할 수 있다.
 
-![4](/assets/img/2023-11-15-[Notion]-노션-API-연동으로-데이터베이스-사용하기.md/4.png)
+![4](/assets/img/2023-11-15-[Notion]-노션-API-연동으로-데이터베이스-사용하기.md/4.png)_Untitled.png_
 
 
 ---

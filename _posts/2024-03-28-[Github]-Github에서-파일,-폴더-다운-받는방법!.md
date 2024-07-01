@@ -23,7 +23,7 @@ Github에서 파일 받는 방법은 터미널에서 git clone을 통해 통째�
 [https://minhaskamal.github.io/DownGit/#/home](https://minhaskamal.github.io/DownGit/#/home)
 
 
-![0](/assets/img/2024-03-28-[Github]-Github에서-파일,-폴더-다운-받는방법!.md/0.png)
+![0](/assets/img/2024-03-28-[Github]-Github에서-파일,-폴더-다운-받는방법!.md/0.png)_Untitled.png_
 
 
 다운 받고 싶은 폴더나 파일에 들어가서 링크를 따와 해당 칸에 넣고 다운로드를 하면된다!

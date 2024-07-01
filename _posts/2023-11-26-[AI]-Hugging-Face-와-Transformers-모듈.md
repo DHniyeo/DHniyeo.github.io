@@ -33,7 +33,7 @@ LLM(Large Language Model)이 유행하고 있는 지금 인공지능에 대한 �
 > [https://huggingface.co/](https://huggingface.co/)
 
 
-![0](/assets/img/2023-11-26-[AI]-Hugging-Face-와-Transformers-모듈.md/0.png)
+![0](/assets/img/2023-11-26-[AI]-Hugging-Face-와-Transformers-모듈.md/0.png)_Untitled.png_
 
 
 하지만 이미 다 모듈화가 되어 있기 때문에 커스터 마이징 하기 어려운 점이 있다.
@@ -79,7 +79,7 @@ LLM(Large Language Model)이 유행하고 있는 지금 인공지능에 대한 �
 설치 도중 다음과 같은 에러가 발생했다..
 
 
-![1](/assets/img/2023-11-26-[AI]-Hugging-Face-와-Transformers-모듈.md/1.png)
+![1](/assets/img/2023-11-26-[AI]-Hugging-Face-와-Transformers-모듈.md/1.png)_Untitled.png_
 
 
 아마 윈도우의 폴더 이름 길이인 256를 넘어서 문제가 발생하게 되는데, 이 문제는 다음과 같이 해결 하였다.
@@ -113,7 +113,7 @@ print(classifier("I've been waiting for a HuggingFace course my whole life."))
 실행 시, 아래와 같은 경고가 뜰 수 있는데,
 
 
-![2](/assets/img/2023-11-26-[AI]-Hugging-Face-와-Transformers-모듈.md/2.png)
+![2](/assets/img/2023-11-26-[AI]-Hugging-Face-와-Transformers-모듈.md/2.png)_Untitled.png_
 
 
 pipline에 argument에 특정 모델을 넣어주지 않았으므로, distilbert-base-uncased-finetuned-sst-2-english 모델을 사용하겠다는 의미이다.
