@@ -81,7 +81,7 @@ categories: [PJT, Notion, Web, ]
 
 
 {% raw %}
-```javascript
+```xml
 const { Client } = require("@notionhq/client");
 const { NotionToMarkdown } = require("notion-to-md");
 const moment = require("moment");
