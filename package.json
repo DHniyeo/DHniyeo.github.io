@@ -15,7 +15,7 @@
         "grunt-contrib-less": "^2.0.0",
         "grunt-contrib-uglify": "^4.0.1",
         "grunt-contrib-watch": "^1.1.0",
-        "@notionhq/client": "^1.0.4",
+        "@notionhq/client": "^2.2.15",
         "@types/node-fetch": "^2.6.2",
         "moment": "^2.29.2",
         "node-fetch": "^2.6.7",
