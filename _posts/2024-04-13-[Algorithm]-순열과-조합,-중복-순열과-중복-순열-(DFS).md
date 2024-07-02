@@ -69,7 +69,6 @@ void dfs_permu_repetition(int depth) { // 중복 순열 : visited[]없음
 		return;
 	}
 	for (int i = 0; i < 5; i++) {
-		if (visited[i] == 1)continue;
 		vc.push_back(arr[i]);
 		dfs_permu_repetition(depth + 1);
 		vc.pop_back();
@@ -82,7 +81,6 @@ void dfs_combi_repetition(int depth, int idx) { // 중복 조합 : visited[]없�
 		return;
 	}
 	for (int i = idx; i < 5; i++) {
-		if (visited[i] == 1)continue;
 		vc.push_back(arr[i]);
 		dfs_combi_repetition(depth + 1, i);
 		vc.pop_back();
