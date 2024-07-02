@@ -76,7 +76,7 @@ categories: [PJT, Notion, Web, ]
 > 💡 workflow 파일과 Notion page 내용을 읽어오는 스크립트 2개 추가
 
 
-1️⃣ _scripts/notion-import.js
+_scripts/notion-import.js
 
 
 	
@@ -403,7 +403,7 @@ categories: [PJT, Notion, Web, ]
 
 
 
-2️⃣ .github/workflows/pages-deploy.yml
+.github/workflows/pages-deploy.yml
 
 
 	
