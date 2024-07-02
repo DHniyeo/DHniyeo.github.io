@@ -15,11 +15,11 @@
                      </style>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 854 120">
                     
-         <path fill="#1C768F"  fill-opacity="1" d="m 0 0 T 0 70 Q 110 -55 220 55 T 440 60 T 660 50 T 880 75 T 880 0 z"></path>
+         <path fill="#76819C"  fill-opacity="1" d="m 0 0 T 0 70 Q 110 -55 220 55 T 440 60 T 660 50 T 880 75 T 880 0 z"></path>
                 </svg>
                 
      
-    <text text-anchor="middle" alignment-baseline="middle" x="50%" y="50%" class="text" style="fill:#032539;" stroke="#none" stroke-width="1" >capsule render</text>
+    <text text-anchor="middle" alignment-baseline="middle" x="50%" y="50%" class="text" style="fill:#363636;" stroke="#none" stroke-width="1" >capsule render</text>
                  
             </svg>
         
