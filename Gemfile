@@ -11,3 +11,4 @@ gem "jekyll-optional-front-matter"
 gem "jekyll-readme-index"
 gem "jekyll-titles-from-headings"
 gem "jekyll-relative-links"
+gem 'faraday', '~> 2.7', '>= 2.7.11'
