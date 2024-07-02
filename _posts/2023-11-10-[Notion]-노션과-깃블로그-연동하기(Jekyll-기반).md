@@ -79,6 +79,9 @@ categories: [PJT, Notion, Web, ]
 1️⃣ _scripts/notion-import.js
 
 
+[https://github.com/DHniyeo/DHniyeo.github.io/blob/master/_scripts/notion-import.js](https://github.com/DHniyeo/DHniyeo.github.io/blob/master/_scripts/notion-import.js)
+
+
 위 Javascript 파일에 대한 dependencies를 설치해야 하는데 이때 `package.json` 파일의 내용에 아래 부분을 추가해주면 된다.
 
 
