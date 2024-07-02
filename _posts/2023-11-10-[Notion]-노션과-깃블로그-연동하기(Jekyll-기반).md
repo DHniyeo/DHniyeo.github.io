@@ -79,43 +79,11 @@ categories: [PJT, Notion, Web, ]
 1️⃣ _scripts/notion-import.js
 
 
+위 Javascript 파일에 대한 dependencies를 설치해야 하는데 이때 `package.json` 파일의 내용에 아래 부분을 추가해주면 된다.
+
+
 
 {% raw %}
-```javascript
-const { Client } = require("@notionhq/client");
-const { NotionToMarkdown } = require("notion-to-md");
-const moment = require("moment");
-const path = require("path");
-const fs = require("fs");
-const axios = require("axios");
-// or
-// import {NotionToMarkdown} from "notion-to-md";
-
-const notion = new Client({
-  auth: process.env.NOTION_TOKEN,
-});
-
-function escapeCodeBlock(body) {
-  const regex = /
-```
-{% endraw %}
-([\s\S]*?)
-{% raw %}
-```/g;
-  return body.replace(regex, function (match, htmlBlock) {
-    return "\n{% raw %}\n
-```
-{% endraw %}
-" + htmlBlock.trim() + "\n
-{% raw %}
-```\n{% endraw %}\n";
-  });
-}
-
-function replaceTitleOutsideRawBlocks(body) {
-  const rawBlocks = [];
-  const placeholder = "{% raw %}[\s\S]*?{% endraw %}";
-  body = body.replace(/{% raw %}
 ```json
 {
   "devDependencies": {
@@ -127,170 +95,11 @@ function replaceTitleOutsideRawBlocks(body) {
   }
 }
 ```
-{% endraw %}/g, (match) => {
-    rawBlocks.push(match);
-    return placeholder;
-  });
-
-  const regex = /\n#[^\n]+\n/g;
-  body = body.replace(regex, function (match) {
-    return "\n" + match.replace("\n#", "\n##");
-  });
-
-  rawBlocks.forEach(block => {
-    body = body.replace(placeholder, block);
-  });
-
-  return body;
-}
-
-// passing notion client to the option
-const n2m = new NotionToMarkdown({ notionClient: notion });
-
-(async () => {
-  // ensure directory exists
-  const root = "_posts";
-  fs.mkdirSync(root, { recursive: true });
-
-  const databaseId = process.env.DATABASE_ID;
-  let response = await notion.databases.query({
-    database_id: databaseId,
-    filter: {
-      property: "공개",
-      checkbox: {
-        equals: true,
-      },
-    },
-  });
-
-  const pages = response.results;
-  while (response.has_more) {
-    const nextCursor = response.next_cursor;
-    response = await notion.databases.query({
-      database_id: databaseId,
-      start_cursor: nextCursor,
-      filter: {
-        property: "공개",
-        checkbox: {
-          equals: true,
-        },
-      },
-    });
-    pages.push(...response.results);
-  }
-
-  for (const r of pages) {
-    const id = r.id;
-    // date
-    let date = moment(r.created_time).format("YYYY-MM-DD");
-    let pdate = r.properties?.["날짜"]?.["date"]?.["start"];
-    if (pdate) {
-      date = moment(pdate).format("YYYY-MM-DD");
-    }
-    // title
-    let title = id;
-    let ptitle = r.properties?.["게시물"]?.["title"];
-    if (ptitle?.length > 0) {
-      title = ptitle[0]?.["plain_text"];
-    }
-    // tags
-    let tags = [];
-    let ptags = r.properties?.["태그"]?.["multi_select"];
-    for (const t of ptags) {
-      const n = t?.["name"];
-      if (n) {
-        tags.push(n);
-      }
-    }
-    // categories
-    let cats = [];
-    let pcats = r.properties?.["카테고리"]?.["multi_select"];
-    for (const t of pcats) {
-      const n = t?.["name"];
-      if (n) {
-        cats.push(n);
-      }
-    }
-
-    // frontmatter
-    let fmtags = "";
-    let fmcats = "";
-    if (tags.length > 0) {
-      fmtags += "\ntags: [";
-      for (const t of tags) {
-        fmtags += t + ", ";
-      }
-      fmtags += "]";
-    }
-    if (cats.length > 0) {
-      fmcats += "\ncategories: [";
-      for (const t of cats) {
-        fmcats += t + ", ";
-      }
-      fmcats += "]";
-    }
-    const fm = `---
-layout: post
-date: ${date}
-title: "${title}"${fmtags}${fmcats}
----
-
-`;
-    const mdblocks = await n2m.pageToMarkdown(id);
-    let md = n2m.toMarkdownString(mdblocks)["parent"];
-    if (md === "") {
-      continue;
-    }
-    md = escapeCodeBlock(md);
-    md = replaceTitleOutsideRawBlocks(md);
-
-    const ftitle = `${date}-${title.replaceAll(" ", "-")}.md`;
-
-    let index = 0;
-    let edited_md = md.replace(
-      /!\[(.*?)\]\((.*?)\)/g,
-      function (match, p1, p2, p3) {
-        const dirname = path.join("assets/img", ftitle);
-        if (!fs.existsSync(dirname)) {
-          fs.mkdirSync(dirname, { recursive: true });
-        }
-        const filename = path.join(dirname, `${index}.png`);
-
-        axios({
-          method: "get",
-          url: p2,
-          responseType: "stream",
-        })
-          .then(function (response) {
-            let file = fs.createWriteStream(`${filename}`);
-            response.data.pipe(file);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-
-        let res;
-        if (p1 === "") res = "";
-        else res = `_${p1}_`;
-
-        return `![4](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/4.png)_${index++}_${res}`;
-      }
-    );
-
-    //writing to file
-    fs.writeFile(path.join(root, ftitle), fm + edited_md, (err) => {
-      if (err) {
-        console.log(err);
-      }
-    });
-  }
-})();
-```
 {% endraw %}
 
 
 
-위 Javascript 파일에 대한 dependencies를 설치해야 하는데 이때 `package.json` 파일의 내용에 아래 부분을 추가해주면 된다.
+2️⃣ .github/workflows/pages-deploy.yml
 
 
 
@@ -403,7 +212,62 @@ jobs:
 
 
 
-2️⃣ .github/workflows/pages-deploy.yml
+
+## 📎 갱신 버튼 설정
+
+
+블로그 글이 업데이트 되는 조건은 아래와 같다.
+
+
+> Dispatch를 통해 WorkFlow가 트리거 되었을 때
+
+
+dispatch를 이용하면 버튼을 눌러서 게시글 업데이트를 진행할 수 있다.
+
+
+> 💡 Github AccessToken 생성
+
+
+먼저, Github AccessToken을 생성해주어야 한다.
+
+
+![4](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/4.png)
+
+
+![5](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/5.png)
+
+
+![6](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/6.png)
+
+
+![7](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/7.png)
+
+
+`Settings`→`Developer settings`→`Personal access tokens`로 들어가서 새 토큰을 생성해준다.
+
+
+scope는 `repo`, `workflow`, `admin:repo_hook`를 선택해준다.
+
+
+이제 토큰을 안전한 곳에 복사해둔다.
+
+
+> 💡 노션에서 갱신(Dispatch) 버튼 생성하기
+
+
+이제 토큰을 활용하여 Dispatch를 시켜줄 버튼을 생성할 것인데, html코드로 노션에 바로 버튼을 생성할 수 없으므로, 아래의 사이트를 이용해 html코드를 노션에서 쓸 수 있도록 변환 시킨다.
+
+
+[https://www.notion-tools.com/embeds/html](https://www.notion-tools.com/embeds/html)
+
+
+html 코드는 아래와 같다.
+
+
+(다음과 같이 코드에서 `USERNAME`, `REPO_NAME`, `GITHUB_ACCESS_TOKEN`을 변경한 후 링크를 생성한다.
+
+
+`GITHUB_ACCESS_TOKEN`은 위에서 생성한 토큰을 작성하면 된다.)
 
 
 
@@ -484,70 +348,10 @@ jobs:
 
 
 
-
-## 📎 갱신 버튼 설정
-
-
-블로그 글이 업데이트 되는 조건은 아래와 같다.
-
-
-> Dispatch를 통해 WorkFlow가 트리거 되었을 때
-
-
-dispatch를 이용하면 버튼을 눌러서 게시글 업데이트를 진행할 수 있다.
-
-
-> 💡 Github AccessToken 생성
-
-
-먼저, Github AccessToken을 생성해주어야 한다.
-
-
-![5](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/5.png)
-
-
-![6](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/6.png)
-
-
-![7](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/7.png)
+노션에서 쓸 수 있도록 html코드를 링크로 변환 시켰다면 해당 링크를 노션 페이지에서 임베드를 통해 연결한다.
 
 
 ![8](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/8.png)
-
-
-`Settings`→`Developer settings`→`Personal access tokens`로 들어가서 새 토큰을 생성해준다.
-
-
-scope는 `repo`, `workflow`, `admin:repo_hook`를 선택해준다.
-
-
-이제 토큰을 안전한 곳에 복사해둔다.
-
-
-> 💡 노션에서 갱신(Dispatch) 버튼 생성하기
-
-
-이제 토큰을 활용하여 Dispatch를 시켜줄 버튼을 생성할 것인데, html코드로 노션에 바로 버튼을 생성할 수 없으므로, 아래의 사이트를 이용해 html코드를 노션에서 쓸 수 있도록 변환 시킨다.
-
-
-[https://www.notion-tools.com/embeds/html](https://www.notion-tools.com/embeds/html)
-
-
-html 코드는 아래와 같다.
-
-
-(다음과 같이 코드에서 `USERNAME`, `REPO_NAME`, `GITHUB_ACCESS_TOKEN`을 변경한 후 링크를 생성한다.
-
-
-`GITHUB_ACCESS_TOKEN`은 위에서 생성한 토큰을 작성하면 된다.)
-
-
-
-%%RAW_BLOCK%%
-
-
-
-노션에서 쓸 수 있도록 html코드를 링크로 변환 시켰다면 해당 링크를 노션 페이지에서 임베드를 통해 연결한다.
 
 
 ![9](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/9.png)
@@ -556,16 +360,13 @@ html 코드는 아래와 같다.
 ![10](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/10.png)
 
 
-![11](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/11.png)
-
-
 > 💡 테스트 하기
 
 
 정상적으로 잘된다면 갱신 버튼을 누른 후 Repository에서 Actions 부분에 들어가면 아래와 같이 정상적으로 동작이 완료된다.
 
 
-![12](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/12.png)
+![11](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/11.png)
 
 
 여기까지가 Notion에서 버튼을 통해 Gitblog 게시물을 자동 업로드 하는 방법이다.
@@ -574,7 +375,7 @@ html 코드는 아래와 같다.
 > 💡 요약
 
 
-![13](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/13.png)
+![12](/assets/img/2023-11-10-[Notion]-노션과-깃블로그-연동하기(Jekyll-기반).md/12.png)
 
 - _scripts/notion-import.js : Notion API, **`notion-to-md`**라이브러리 및 기타 종속성을 사용하여 Notion 데이터베이스 항목을 Markdown 파일로 변환합니다.
 - .github/workflows/pages-deploy.yml : 이 GitHub Actions 워크플로는 Notion 데이터베이스의 변경 사항을 기반으로 Jekyll 사이트의 구축 및 배포 프로세스를 자동화하도록 설계되었습니다.
