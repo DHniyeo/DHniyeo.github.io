@@ -2,10 +2,9 @@
 layout: post
 date: 2023-11-10
 title: "[Notion] 노션과 깃블로그 연동하기(Jekyll 기반)"
-tags: [PJT, Notion, web, ]
-categories: [PJT, Notion, Web, ]
+tags: [PJT, Notion, web]
+categories: [PJT, Notion, Web]
 ---
-
 
 
 ## 📎 Notion 환경 설정

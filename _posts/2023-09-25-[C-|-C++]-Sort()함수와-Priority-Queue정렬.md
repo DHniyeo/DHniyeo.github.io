@@ -2,10 +2,9 @@
 layout: post
 date: 2023-09-25
 title: "[C | C++] Sort()함수와 Priority Queue정렬"
-tags: [C, C++, ]
-categories: [Program Language, ]
+tags: [C, C++]
+categories: [Program Language]
 ---
-
 
 
 ## 🐿️ Sort() 함수란?

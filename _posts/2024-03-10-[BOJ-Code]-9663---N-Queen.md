@@ -2,10 +2,9 @@
 layout: post
 date: 2024-03-10
 title: "[BOJ-Code] 9663 - N-Queen"
-tags: [Algorithm-백트래킹, ]
-categories: [CodingTest, ]
+tags: [Algorithm-백트래킹]
+categories: [CodingTest]
 ---
-
 
 [문제 링크](https://www.acmicpc.net/problem/9663)
 

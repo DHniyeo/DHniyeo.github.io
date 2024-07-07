@@ -2,10 +2,9 @@
 layout: post
 date: 2024-04-13
 title: "[Algorithm] 순열과 조합, 중복 순열과 중복 순열 (DFS)"
-tags: [Algorithm-구현, C++, Algorithm-DFS/BFS, ]
-categories: [Algorithm, Samsung기출, CodingTest, ]
+tags: [Algorithm-구현, C++, Algorithm-DFS/BFS]
+categories: [Algorithm, Samsung기출, CodingTest]
 ---
-
 
 
 ## 개요

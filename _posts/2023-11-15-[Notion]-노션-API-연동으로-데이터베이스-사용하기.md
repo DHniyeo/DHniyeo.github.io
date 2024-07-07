@@ -2,10 +2,9 @@
 layout: post
 date: 2023-11-15
 title: "[Notion] 노션 API 연동으로 데이터베이스 사용하기"
-tags: [PJT, Notion, web, ]
-categories: [PJT, Notion, Web, ]
+tags: [PJT, Notion, web]
+categories: [PJT, Notion, Web]
 ---
-
 
 
 ## 🐿️ 노션 통합 API 생성하기

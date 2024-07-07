@@ -2,10 +2,9 @@
 layout: post
 date: 2023-09-25
 title: "브루트 포스(Brute Force)"
-tags: [CS, ]
-categories: [Algorithm, ]
+tags: [CS]
+categories: [Algorithm]
 ---
-
 
 
 ## 브루트 포스(Brute Force)

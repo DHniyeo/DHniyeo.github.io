@@ -2,10 +2,9 @@
 layout: post
 date: 2024-01-06
 title: "[Python] Python 프로그램을 exe 파일로 변환하기"
-tags: [Python, ]
-categories: [Program Language, ]
+tags: [Python]
+categories: [Program Language]
 ---
-
 
 
 ## 🐿️ 개요

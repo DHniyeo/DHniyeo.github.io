@@ -2,10 +2,9 @@
 layout: post
 date: 2023-12-17
 title: "[TroubleShoot] window 11 pyinstaller 설치 오류"
-tags: [TroubleShoot, ]
-categories: [Trouble Shoot, ]
+tags: [TroubleShoot]
+categories: [Trouble Shoot]
 ---
-
 
 
 ## 개요
