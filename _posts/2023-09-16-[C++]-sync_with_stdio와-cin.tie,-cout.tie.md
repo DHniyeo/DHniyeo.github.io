@@ -2,9 +2,10 @@
 layout: post
 date: 2023-09-16
 title: "[C++] sync_with_stdio와 cin.tie, cout.tie"
-tags: [C++]
-categories: [Program Language]
+tags: [C++, ]
+categories: [Program Language, ]
 ---
+
 
 
 ## 🐿️ 개요

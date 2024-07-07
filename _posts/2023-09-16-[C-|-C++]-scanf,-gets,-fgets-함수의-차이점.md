@@ -2,9 +2,10 @@
 layout: post
 date: 2023-09-16
 title: "[C | C++] scanf, gets, fgets 함수의 차이점"
-tags: [C, C++]
-categories: [Program Language]
+tags: [C, C++, ]
+categories: [Program Language, ]
 ---
+
 
 
 ## 🐿️ 기본적으로 0000(엔터) 를 입력했을 시

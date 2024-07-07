@@ -2,9 +2,10 @@
 layout: post
 date: 2024-03-28
 title: "[Github] Github에서 파일, 폴더 다운 받는방법!"
-tags: [Git, Information]
-categories: [Git, IT Tech]
+tags: [Git, Information, ]
+categories: [Git, IT Tech, ]
 ---
+
 
 
 ## 개요

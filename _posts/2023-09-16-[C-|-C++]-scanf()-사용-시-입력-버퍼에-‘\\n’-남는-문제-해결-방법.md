@@ -2,9 +2,10 @@
 layout: post
 date: 2023-09-16
 title: "[C | C++] scanf() 사용 시 입력 버퍼에 ‘\\n’ 남는 문제 해결 방법"
-tags: [C, C++]
-categories: [Program Language]
+tags: [C, C++, ]
+categories: [Program Language, ]
 ---
+
 
 
 #### 🐿️ 버퍼 값 초기화 하기 - fflush 함수 (C언어에서는 사용불가)
