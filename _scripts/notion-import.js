@@ -151,9 +151,8 @@ title: "${title}"${fmtags}${fmcats}
     md = replaceTitleOutsideRawBlocks(md);
 
     let edited_title = title.replaceAll(" ", "-"); // 공백변환
-
-    const invalidChars = /[<>:"/\\|?*\x00-\x1F]/g;
-    const edited_title = sanitizeFileName(edited_title);
+    edited_title = sanitizeFileName(edited_title);
+    
     const ftitle = `${date}-${edited_title}.md`; 
     
 
