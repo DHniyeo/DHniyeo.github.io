@@ -7,8 +7,7 @@ categories: [PJT, Notion, Web, ]
 ---
 
 
-
-## 🐿️ 노션 통합 API 생성하기
+# 🐿️ 노션 통합 API 생성하기
 
 
 아래 사이트에 접속 후 API를 통합한다.
@@ -26,8 +25,7 @@ categories: [PJT, Notion, Web, ]
 **프라이빗 API 통합 시크릿**을 따로 저장한다.
 
 
-
-## 🐿️ 데이터 베이스 생성하기
+# 🐿️ 데이터 베이스 생성하기
 
 
 ![1](/assets/img/2023-11-15-[Notion]-노션-API-연동으로-데이터베이스-사용하기.md/1.png)
@@ -45,8 +43,7 @@ DB로 사용할 페이지에서 방금 생성한 통합 API를 연결 해준다.
 여기서 **database_id** 를 안전한 곳에 보관해둔다.
 
 
-
-## 🐿️ Postman 에서 데이터 읽어보기
+# 🐿️ Postman 에서 데이터 읽어보기
 
 
 [bookmark](https://www.postman.com/)

@@ -7,8 +7,7 @@ categories: [Program Language, ]
 ---
 
 
-
-## 🐿️ Sort() 함수란?
+# 🐿️ Sort() 함수란?
 
 
 Sort 함수는 배열이나 Vector등의 배열 또는 리스트와 같은 데이터 구조의 요소를 정렬하는 데 사용된다.
@@ -35,12 +34,10 @@ intro sort의 경우 퀵소트, 힙소트, 삽입 정렬을 섞어 사용하여 
 단, List의 sort는 algorithm 헤더의 sort가 아닌 멤버 함수인 sort를 사용하는데, 이때 사용하는 sort는 MergeSort를 사용한다. (Merge Sort 가 안정적인 정렬 방식 이기 때문에)
 
 
-
-## 🐿️ Sort() 함수로 정렬 가능한 자료구조
-
+# 🐿️ Sort() 함수로 정렬 가능한 자료구조
 
 
-### 1️⃣ 배열 (Array)
+## 1️⃣ 배열 (Array)
 
 
 C++의 배열은 std::sort 함수를 사용하여 정렬할 수 있다.
@@ -77,8 +74,7 @@ int main()
 
 
 
-
-### 2️⃣ 벡터 (Vector)
+## 2️⃣ 벡터 (Vector)
 
 
 std::vector는 동적 배열로, std::sort 함수를 사용하여 쉽게 정렬할 수 있다.
@@ -115,8 +111,7 @@ int main()
 
 
 
-
-### 3️⃣ 리스트 (List)
+## 3️⃣ 리스트 (List)
 
 
 std::list는 이중 연결 리스트로, std::sort 함수를 사용하여 정렬할 수 있다.
@@ -157,8 +152,7 @@ int main()
 
 
 
-
-## 🐿️ Sort() 함수로 정렬이 불가능한 자료구조
+# 🐿️ Sort() 함수로 정렬이 불가능한 자료구조
 
 
 Sort 함수로 정렬이 불가능한 자료구조는 큐(Queue), set(집합), 맵(Map)이다.
@@ -173,8 +167,7 @@ Map과 Set의 정의와 설명에 관한 자료는 아래 링크를 참고한다
 **[참고] :** [https://doorrock.tistory.com/21](https://doorrock.tistory.com/21)
 
 
-
-## 🐿️ Priority Queue
+# 🐿️ Priority Queue
 
 
 **[참고] :** [https://myvelop.tistory.com/153](https://myvelop.tistory.com/153)

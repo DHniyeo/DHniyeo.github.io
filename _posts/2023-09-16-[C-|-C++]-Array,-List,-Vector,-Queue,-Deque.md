@@ -7,8 +7,7 @@ categories: [Program Language, ]
 ---
 
 
-
-## 🐿️ Array
+# 🐿️ Array
 
 
 참고 : [https://www.programiz.com/c-programming/c-arrays](https://www.programiz.com/c-programming/c-arrays)
@@ -58,8 +57,7 @@ printf("%d", data[0]);
 배열은 주로 동일한 타입의 데이터를 컴팩트하게 저장하고 관리하기 위해 사용됩니다. 그러나 배열의 크기를 동적으로 조정할 수 없으며, 크기가 고정되어 있으므로 저장할 수 있는 요소의 수가 제한되어 있습니다.
 
 
-
-## 🐿️ List
+# 🐿️ List
 
 
 참고 : [https://www.programiz.com/cpp-programming/list](https://www.programiz.com/cpp-programming/list)
@@ -97,8 +95,7 @@ for (int value : myList) {
 리스트는 데이터 요소의 삽입과 삭제가 자주 발생하는 경우에 유용하며, 크기가 동적으로 조정되므로 필요에 따라 요소들을 추가하거나 제거할 수 있습니다.
 
 
-
-## 🐿️ Vector
+# 🐿️ Vector
 
 
 참고 : [https://www.programiz.com/cpp-programming/vectors](https://www.programiz.com/cpp-programming/vectors)
@@ -134,8 +131,7 @@ for (int value : myVector) {
 벡터는 배열과 유사한 형태를 가지지만 크기가 동적으로 조정될 수 있으므로, 일반적으로 배열보다 편리하게 사용할 수 있습니다.
 
 
-
-## 🐿️ Queue
+# 🐿️ Queue
 
 
 참고 : [https://www.programiz.com/cpp-programming/queue](https://www.programiz.com/cpp-programming/queue)
@@ -173,8 +169,7 @@ while (!myQueue.empty()) {
 큐는 데이터의 순서를 유지하면서 삽입과 삭제를 효율적으로 수행할 수 있습니다.
 
 
-
-## 🐿️ Deque
+# 🐿️ Deque
 
 
 참고 : [https://www.programiz.com/cpp-programming/deque](https://www.programiz.com/cpp-programming/deque)
@@ -212,15 +207,13 @@ while (!myDeque.empty()) {
 덱은 양쪽에서 요소의 삽입과 삭제를 효율적으로 수행할 수 있으며, 큐 및 스택의 기능을 활용할 수 있습니다.
 
 
-
-## 🐿️ 예시
+# 🐿️ 예시
 
 
 다음은 각 자료구조의 사용 예시입니다.
 
 
-
-### 🐇 Array 예시
+## 🐇 Array 예시
 
 
 
@@ -243,8 +236,7 @@ int main() {
 
 
 
-
-### 🐇 List 예시
+## 🐇 List 예시
 
 
 
@@ -272,8 +264,7 @@ int main() {
 
 
 
-
-### 🐇 Vector 예시
+## 🐇 Vector 예시
 
 
 
@@ -301,8 +292,7 @@ int main() {
 
 
 
-
-### 🐇 Queue 예시
+## 🐇 Queue 예시
 
 
 
@@ -331,8 +321,7 @@ int main() {
 
 
 
-
-### 🐇 Deque 예시
+## 🐇 Deque 예시
 
 
 
@@ -364,8 +353,7 @@ int main() {
 위의 예시들은 각 자료구조들의 기본적인 사용법을 보여주고 있습니다. 
 
 
-
-## 요약
+# 요약
 
 
 **배열**은 고정된 크기로 데이터를 관리하고, 

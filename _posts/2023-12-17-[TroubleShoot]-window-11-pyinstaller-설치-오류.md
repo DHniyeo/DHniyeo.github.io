@@ -7,8 +7,7 @@ categories: [Trouble Shoot, ]
 ---
 
 
-
-## 개요
+# 개요
 
 
 기존에 쓰던 python 프로그램을 사용하다 매번 vscode를 켜고 프로그램을 작동 시키는 과정이 번거롭다 라는 생각을 해봤다. 그러던 중 ‘pyinstaller’를 이용하면 python 프로그램을 exe 파일로 만들어줄 수 있다는 것이다.
@@ -26,8 +25,7 @@ categories: [Trouble Shoot, ]
 그러던 중 현재 쓰고 있는 Window 버전이 11 버전 이었고 이에 따른 문제가 발생할 수 있다 라는 것이다.
 
 
-
-## 해결
+# 해결
 
 
 그래서 Window11을 downgrade 할 순 없으니,,  찾아보니 환경변수의 path에 아래 경로를 추가해주면 되었다.

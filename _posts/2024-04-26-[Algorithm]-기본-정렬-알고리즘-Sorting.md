@@ -7,8 +7,7 @@ categories: [Algorithm, Computer Science, ]
 ---
 
 
-
-## 개요
+# 개요
 
 
 코딩 테스트에도 간혹 등장하고 정렬하는 모든 방법을 정리해보고자 한다.
@@ -23,8 +22,7 @@ categories: [Algorithm, Computer Science, ]
 따라서 **O(n*logn)**의 시간 복잡도를 항상 만족한다.
 
 
-
-## 1. 삽입 정렬 (Insertion sort)
+# 1. 삽입 정렬 (Insertion sort)
 
 
 ![0](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/0.png)
@@ -64,8 +62,7 @@ void insertionSort(int arr[], int n) {
 - 다른 정렬 알고리즘들보다 느린 속도입니다.
 - O(n^2)의 시간 복잡도를 가지고 있습니다.
 
-
-## 2. 선택 정렬 (Selection sort)
+# 2. 선택 정렬 (Selection sort)
 
 
 ![1](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/1.png)
@@ -103,8 +100,7 @@ void selectionSort(int arr[], int n) {
 - 다른 정렬 알고리즘들보다 느린 속도입니다.
 - O(n^2)의 시간 복잡도를 가지고 있습니다.
 
-
-## 3. 버블 정렬 (Bubble sort)
+# 3. 버블 정렬 (Bubble sort)
 
 
 ![2](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/2.png)
@@ -141,8 +137,7 @@ void bubbleSort(int arr[], int n) {
 - 다른 정렬 알고리즘들보다 느린 속도입니다.
 - O(n^2)의 시간 복잡도를 가지고 있습니다.
 
-
-## 4. 퀵 정렬 (Quick sort)
+# 4. 퀵 정렬 (Quick sort)
 
 
 ![3](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/3.png)
@@ -195,8 +190,7 @@ int partition(int arr[], int low, int high) {
 - 최악의 경우 O(n^2)의 시간 복잡도 (피벗 요소가 최소 또는 최대값인 경우)
 - 불안정한 알고리즘 (같은 값을 가진 요소들의 순서가 변경될 수 있음)
 
-
-## 5. 병합 정렬 (Merge sort)
+# 5. 병합 정렬 (Merge sort)
 
 
 ![4](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/4.png)
@@ -251,8 +245,7 @@ void merge(int arr[], int low, int mid, int high) {
 - 퀵 정렬보다 느린 속도 (일반적으로)
 - 추가 공간이 필요합니다.
 
-
-## 6. **힙 정렬 (Heap Sort)**
+# 6. **힙 정렬 (Heap Sort)**
 
 
 ![5](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/5.png)
@@ -307,8 +300,7 @@ void heapify(int arr[], int i, int end) {
 - 최악의 경우 O(n log n)의 시간 복잡도
 - 불안정한 알고리즘 (같은 값을 가진 요소들의 순서가 변경될 수 있음)
 
-
-## **7. 셸 정렬 (Shell Sort)**
+# **7. 셸 정렬 (Shell Sort)**
 
 
 ![6](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/6.png)
@@ -355,8 +347,7 @@ void shellSort(int arr[], int n) {
 - 적절한 쉘 시퀀스를 선택하는 것이 중요합니다. 일반적으로 2의 거듭제곱 시퀀스 또는 위에 제시된 시퀀스와 같은 시퀀스를 사용할 수 있습니다.
 - 셸 정렬은 작은 데이터 세트에 효율적이지만, 매우 큰 데이터 세트에는 다른 정렬 알고리즘을 사용하는 것이 더 나을 수 있습니다.
 
-
-## **8. 기수 정렬 (Radix Sort)**
+# **8. 기수 정렬 (Radix Sort)**
 
 
 ![7](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/7.png)
@@ -430,8 +421,7 @@ void countingSort(int arr[], int n, int digit) {
 - 입력 데이터의 범위가 제한되어야 합니다. 예를 들어, 음수를 포함하는 데이터를 정렬하려면 음수 값을 양수 값으로 변환해야 합니다.
 - 기수 정렬은 매우 큰 데이터 세트에 효율적이지만, 작은 데이터 세트에는 다른 정렬 알고리즘을 사용하는 것이 더 나을 수 있습니다.
 
-
-## **9. 카운팅 정렬 (Counting Sort)**
+# **9. 카운팅 정렬 (Counting Sort)**
 
 
 ![8](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/8.png)
@@ -471,8 +461,7 @@ void countingSort(int arr[], int n, int min, int max) {
 - 문자열이나 실수와 같이 다양한 값을 가진 데이터에는 적합하지 않음
 - 큰 범위의 데이터에는 공간 비효율적일 수 있음
 
-
-## **10. Tim Sort**
+# **10. Tim Sort**
 
 
 ![9](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/9.png)
@@ -597,8 +586,7 @@ void timSort(int arr[], int n) {
 ---
 
 
-
-## 정리
+# 정리
 
 
 ![10](/assets/img/2024-04-26-[Algorithm]-기본-정렬-알고리즘-Sorting.md/10.png)

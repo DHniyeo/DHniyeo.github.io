@@ -7,8 +7,7 @@ categories: [Git, IT Tech, ]
 ---
 
 
-
-## 개요
+# 개요
 
 
 Github에서 파일 받는 방법은 터미널에서 git clone을 통해 통째로 파일을 받아오거나, curl 또는 wget을 통해 파일을 하나 씩 다운 받는 방법이 있다.

@@ -7,15 +7,13 @@ categories: [AI, ]
 ---
 
 
-
-## 🧠 개요
+# 🧠 개요
 
 
 LLM(Large Language Model)이 유행하고 있는 지금 인공지능에 대한 기대는 매우 높다. 그렇기에 요즘 Transformer 라는 모듈을 자주 보게 된다. 그렇다면 Transformer라는 모듈이 무엇이고, 이 Transformer라는 모듈을 만든 huggingface는 어떤 역할을 하는지 알아보자.
 
 
-
-## 🧠 Hugging Face
+# 🧠 Hugging Face
 
 
 허깅페이스는 트랜스포머를 기반으로 하는 다양한 모델(_transformer.models_)과 학습 스크립트(_transformer.Trainer_)를 제공하는 모듈이다.
@@ -39,8 +37,7 @@ LLM(Large Language Model)이 유행하고 있는 지금 인공지능에 대한 �
 하지만 이미 다 모듈화가 되어 있기 때문에 커스터 마이징 하기 어려운 점이 있다.
 
 
-
-## 🧠 Transformer
+# 🧠 Transformer
 
 
 트랜스포머는 CNN, RNN과 같이 인공지능 분야에서 많이 사용되는 모델이다.
@@ -50,23 +47,20 @@ LLM(Large Language Model)이 유행하고 있는 지금 인공지능에 대한 �
 여기서 Self-attention은 진화를 거듭하는 수학적 기법을 응용해 서로 떨어져 있는 데이터 요소들의 의미가 관계에 따라 미묘하게 달라지는 부분까지 감지한다.
 
 
-
-### 🦾 transformers.models
+## 🦾 transformers.models
 
 
 트랜스포머 기반의 다양한 모델을 파이토치, 텐서 플로우로 각각 구현 해놓은 모듈이다. 또한 각 모델에 맞는 tokenizer도 구현되어 있다.
 
 - tokenizer란? 입력된 텍스트를 모델에서 처리할 수 있는 데이터로 변환해주는 것이라 할 수 있다. 예를 들어 공백 단위로 문장을 분절 하거나, 단어 단위로 문장을 분절 하는 방식을 tokenizer라 할 수 있다.
 
-
-### 🦾 transformers.Trainer
+## 🦾 transformers.Trainer
 
 
 딥러닝 학습 및 평가에 필요한 optimizer, weight updt, learning rate schedul, ckpt, tensorbord, evaluation 등을 수행한다. Trainer.train 함수를 호출하면 이 모든 과정이 사용자가 원하는 arguments에 맞게 실행된다.
 
 
-
-## 🧠 예제
+# 🧠 예제
 
 
 간단한 예제를 통해 Transformers와 익숙해져 보기로 했다.
