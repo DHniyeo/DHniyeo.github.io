@@ -136,12 +136,12 @@ title: "${title}"${fmtags}${fmcats}
     if (md === "") {
       continue;
     }
-    md = escapeCodeBlock(md);
-    md = replaceTitleOutsideRawBlocks(md);
+    /* mdfile 문법 수정 */
+    md = escapeCodeBlock(md); // 코드 블록 처리
+    //md = replaceTitleOutsideRawBlocks(md); // 제목 레벨을 변경
 
     let edited_title = title.replaceAll(" ", "-"); // 공백변환
-    const ftitle = `${date}-${edited_title}.md`; 
-    
+    const ftitle = `${date}-${edited_title}.md`;     
 
     let index = 0;
     let edited_md = md.replace(
