@@ -59,7 +59,85 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
   });
 
   const pages = response.results;
-  while (response.has_more) { // 다음 페이지가 남아 있해
+ while (response.has_more) { // 다음 페이지가 남아 있는지 확인하여 pages에 추가
+    const nextCursor = response.next_cursor;
+    response = await notion.databases.query({
+      database_id: databaseId,
+      start_cursor: nextCursor,
+      filter: {
+        property: "공개",
+        checkbox: {
+          equals: true,
+        },
+      },
+    });
+    pages.push(...response.results);
+  }
+
+  for (const r of pages) { // 페이지 단위 처리
+    const id = r.id;
+    // date
+    let date = moment(r.created_time).format("YYYY-MM-DD");
+    let pdate = r.properties?.["날짜"]?.["date"]?.["start"];
+    if (pdate) {
+      date = moment(pdate).format("YYYY-MM-DD");
+    }
+    // title
+    let title = id;
+    let ptitle = r.properties?.["게시물"]?.["title"];
+    if (ptitle?.length > 0) {
+      title = ptitle[0]?.["plain_text"];
+    }
+    // tags
+    let tags = [];
+    let ptags = r.properties?.["태그"]?.["multi_select"];
+    for (const t of ptags) {
+      const n = t?.["name"];
+      if (n) {
+        tags.push(n);
+      }
+    }
+    // categories
+    let cats = [];
+    let pcats = r.properties?.["카테고리"]?.["multi_select"];
+    for (const t of pcats) {
+      const n = t?.["name"];
+      if (n) {
+        cats.push(n);
+      }
+    }
+
+    // frontmatter
+    let fmtags = "";
+    let fmcats = "";
+    if (tags.length > 0) {
+      fmtags += "\ntags: [";
+      for (const t of tags) {
+        fmtags += t + ", ";
+      }
+      fmtags += "]";
+    }
+    if (cats.length > 0) {
+      fmcats += "\ncategories: [";
+      for (const t of cats) {
+        fmcats += t + ", ";
+      }
+      fmcats += "]";
+    }
+    const fm = `---
+layout: post
+date: ${date}
+title: "${title}"${fmtags}${fmcats}
+---
+`;
+    const mdblocks = await n2m.pageToMarkdown(id);
+    let md = n2m.toMarkdownString(mdblocks)["parent"];
+    if (md === "") {
+      continue;
+    }
+    /* mdfile 문법 수정 */
+    md = escapeCodeBlock(md); // 코드 블록 처리
+    md = replaceTitleOutsideRawBlocks(md); // 제목 레벨을 변경
 
     let edited_title = title.replaceAll(" ", "-"); // 공백변환
     const ftitle = `${date}-${edited_title}.md`;     
