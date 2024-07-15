@@ -37,17 +37,6 @@ function replaceTitleOutsideRawBlocks(body) { // 제목 레벨을 변경하는 �
 
   return body;
 }
-function toHalfWidth(str) {
-    return str.replace(/[！-～]/g, function (ch) {
-        return String.fromCharCode(ch.charCodeAt(0) + 0xFEE0);
-    });
-}
-function sanitizeFileName(fileName) {
-    const invalidChars = /[<>:"/\\|?*\x00-\x1F]/g;
-    return fileName.replace(invalidChars, function(ch) {
-        return toHalfWidth(ch);
-    });
-}
 
 
 // passing notion client to the option
@@ -151,8 +140,6 @@ title: "${title}"${fmtags}${fmcats}
     md = replaceTitleOutsideRawBlocks(md);
 
     let edited_title = title.replaceAll(" ", "-"); // 공백변환
-    edited_title = sanitizeFileName(edited_title);
-    
     const ftitle = `${date}-${edited_title}.md`; 
     
 
