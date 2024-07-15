@@ -7,7 +7,7 @@ categories: [PJT, Notion, Web, ]
 ---
 
 
-# 📎 Notion 환경 설정
+## 📎 Notion 환경 설정
 
 
 > 💡 Notion API 통합 생성(API 시크릿 키 구하기)
@@ -59,7 +59,8 @@ categories: [PJT, Notion, Web, ]
 여기서 **database_id** 를 안전한 곳에 보관해둔다.
 
 
-# 📎 Github 환경 설정
+
+## 📎 Github 환경 설정
 
 
 > 💡 Github에서 환경변수 등록하기
@@ -213,7 +214,8 @@ jobs:
 
 
 
-# 📎 갱신 버튼 설정
+
+## 📎 갱신 버튼 설정
 
 
 블로그 글이 업데이트 되는 조건은 아래와 같다.

@@ -7,7 +7,7 @@ categories: [Program Language, ]
 ---
 
 
-# 🐿️ 개요
+## 🐿️ 개요
 
 
 코테 준비를 하면서 입출력 속도 문제로 인해 `Fail`이 발생할 때 어떤 원리인지는 몰라도 다들 쓰듯이 아래와 같은 코드를 입력하여 문제를 해결 하였다.
@@ -30,7 +30,8 @@ cout.tie(nullptr)
 ---
 
 
-# 🐿️ Stream
+
+## 🐿️ Stream
 
 
 우선 `stream`에 대한 이해가 먼저 필요합니다.
@@ -72,7 +73,8 @@ cout.tie(nullptr)
 그래서 `freopen`, `fopen`과 같은 함수로 파일도 스트림으로 연결하여 `scanf`, `cin`과 같은 함수로 가져올 수 있는 것이죠.
 
 
-# 🐿️ Standard Stream
+
+## 🐿️ Standard Stream
 
 
 유닉스에서는 프로그램을 사용할 때, 사용자가 따로 지정하지 않아도 3개 정도의 `stream`을 자동으로 연결해줍니다. `입력`, `출력`, `에러` 스트림입니다. 이러한 stream들을 **표준 스트림(Standard Stream)이라고 합니다.**
@@ -91,7 +93,8 @@ cout.tie(nullptr)
 	- `std::wcerr`
 	- `std::wclog`
 
-# 🐿️ Sync_with_stdio
+
+## 🐿️ Sync_with_stdio
 
 
 일반적으로 c의 stream과 c++의 stream은 동기화 되어 있기 때문에, 한 코드를 작성할 때 c style 코드와 c++ style 코드를 혼용하여도 같은 stream 버퍼에 쌓이기 때문에 의도한 대로 입출력을 할 수 있습니다. 또한 multi-threading을 사용할 때, 각각 출력 연산을 수행 하여도 충돌이 일어나지 않습니다. 일반적으로 `std::cout`, `std::cin`을 사용할 때 프로그램의 속도가 `scanf`, `printf`보다 느린 이유입니다.
@@ -177,7 +180,8 @@ cout.tie(nullptr)
 ---
 
 
-# 🐿️ cin.tie(nullptr), cout.tie(nullptr)
+
+## 🐿️ cin.tie(nullptr), cout.tie(nullptr)
 
 
 cin과 cout은 default로 tie되어 있습니다.
@@ -223,7 +227,8 @@ std::cin >> name;
 ---
 
 
-# 🐿️ std::endl
+
+## 🐿️ std::endl
 
 
 개행에 `\n` 대신 `endl`을 쓰게 되면 출력 속도가 훨씬 느려집니다.
@@ -238,7 +243,8 @@ std::cin >> name;
 ---
 
 
-# 🐿️ Conclusion
+
+## 🐿️ Conclusion
 
 1. `std::sync_with_stdio(false)`를 하게 되면 c++의 입출력 속도를 향상시킬 수 있다.
 

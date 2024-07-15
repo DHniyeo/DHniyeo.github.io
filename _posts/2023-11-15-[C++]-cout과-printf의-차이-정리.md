@@ -7,7 +7,7 @@ categories: [Program Language, ]
 ---
 
 
-# 🐿️ cout
+## 🐿️ cout
 
 
 헤더파일 : iostream
@@ -38,7 +38,8 @@ std::cout << 1.5 << endl; //double형 출력 함수 호출
 printf에 비해 처리 속도가 느리다.
 
 
-# 🐿️ printf
+
+## 🐿️ printf
 
 
 헤더파일 : cstdio
