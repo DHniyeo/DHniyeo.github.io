@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Anurag Hazra's GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 70518, Total Commits in 2024 : 137, Total PRs: 776, Total Issues: 178, Contributed to (last year): 3</desc>
+        <desc id="descId">Total Stars Earned: 70850, Total Commits in 2024 : 135, Total PRs: 777, Total Issues: 180, Contributed to (last year): 3</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 28.877759808922292;
+        stroke-dashoffset: 29.02857028224477;
       }
     }
   
@@ -162,7 +162,7 @@
         x="219.01"
         y="12.5"
         data-testid="stars"
-      >70.5k</text>
+      >70.8k</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
@@ -177,7 +177,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >137</text>
+      >135</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >776</text>
+      >777</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -207,7 +207,7 @@
         x="219.01"
         y="12.5"
         data-testid="issues"
-      >178</text>
+      >180</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
