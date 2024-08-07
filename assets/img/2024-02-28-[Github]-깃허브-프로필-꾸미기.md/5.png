@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Anurag Hazra's GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 71121, Total Commits in 2024 : 134, Total PRs: 777, Total Issues: 179, Contributed to (last year): 3</desc>
+        <desc id="descId">Total Stars Earned: 71120, Total Commits in 2024 : 134, Total PRs: 778, Total Issues: 180, Contributed to (last year): 3</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 29.112285570741314;
+        stroke-dashoffset: 29.108263609670633;
       }
     }
   
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >777</text>
+      >778</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -207,7 +207,7 @@
         x="219.01"
         y="12.5"
         data-testid="issues"
-      >179</text>
+      >180</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">

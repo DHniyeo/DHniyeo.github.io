@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2024-03-12
-title: "[C | C++] 자료구조의 시간 복잡도와 정렬 방법 정리"
+title: "[C | C++] sort 정렬 함수와 사용자 지정 cmp 함수"
 tags: [C, C++, ]
 categories: [Program Language, ]
 ---
@@ -10,7 +10,14 @@ categories: [Program Language, ]
 ## 개요
 
 
-코딩테스트 공부를 위해 가장 자주 쓰이는 자료구조인 Array, Vector, Queue, Priority Queue 의 시간 복잡도와 정렬 방법을 알아보자.
+코딩테스트 공부를 위해 가장 자주 쓰이는 자료구조인 Array, Vector, Queue, Priority Queue 의 정렬 방법과 사용자 지정 cmp함수 사용법을 알아보자.
+
+
+cmp함수란 sort 함수를 이용하거나 priority_queue를 이용할 때 사용자 임의 비교 함수를 만들어 특정 value를 기준으로 오름차순 또는 내림차순 정렬이 가능하도록 설정하는 함수를 말한다.
+
+
+Vector나 array의 경우 bool 반환형을 가진 함수를 이용하고
+priority_queue의 경우 struct 구조로 연산자 재정의 함수를 이용한다.
 
 
 ---
@@ -156,4 +163,8 @@ int main() {
 ```
 {% endraw %}
 
+
+
+
+### d
 
