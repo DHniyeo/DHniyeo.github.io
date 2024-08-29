@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2024-04-13
-title: "[Algorithm] 순열과 조합, 중복 순열과 중복 순열 (DFS)"
+title: "[Algorithm] 순열과 조합, 중복 순열과 중복 순열 (DFS,경우의 수)"
 tags: [Algorithm-구현, C++, Algorithm-DFS/BFS, ]
 categories: [Algorithm, Samsung기출, CodingTest, ]
 ---
@@ -105,7 +105,7 @@ int main() {
 결과는 다음과 같다
 
 
-![0](/assets/img/2024-04-13-[Algorithm]-순열과-조합,-중복-순열과-중복-순열-(DFS).md/0.png)
+![0](/assets/img/2024-04-13-[Algorithm]-순열과-조합,-중복-순열과-중복-순열-(DFS,경우의-수).md/0.png)
 
 
 
