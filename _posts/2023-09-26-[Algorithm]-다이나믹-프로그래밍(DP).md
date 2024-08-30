@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-09-26
-title: "다이나믹 프로그래밍(DP)"
+title: "[Algorithm] 다이나믹 프로그래밍(DP)"
 tags: [CS, ]
 categories: [Algorithm, ]
 ---

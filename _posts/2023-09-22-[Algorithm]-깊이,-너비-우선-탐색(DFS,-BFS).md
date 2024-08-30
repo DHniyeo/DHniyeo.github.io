@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-09-22
-title: "깊이, 너비 우선 탐색(DFS, BFS)"
+title: "[Algorithm] 깊이, 너비 우선 탐색(DFS, BFS)"
 tags: [CS, ]
 categories: [Algorithm, ]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2024-05-14
-title: "다익스트라 알고리즘(Dijkstra)"
+title: "[Algorithm] 다익스트라 알고리즘(Dijkstra)"
 tags: [CS, ]
 categories: [Algorithm, ]
 ---

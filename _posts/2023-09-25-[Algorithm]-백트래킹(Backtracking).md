@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-09-25
-title: "백트래킹(Backtracking)"
+title: "[Algorithm] 백트래킹(Backtracking)"
 tags: [CS, ]
 categories: [Algorithm, ]
 ---

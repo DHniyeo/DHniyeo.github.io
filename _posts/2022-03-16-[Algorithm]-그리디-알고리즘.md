@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2022-03-16
-title: "그리디 알고리즘"
+title: "[Algorithm] 그리디 알고리즘"
 tags: [CS, ]
 categories: [Algorithm, ]
 ---
